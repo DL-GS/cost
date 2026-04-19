@@ -101,7 +101,19 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
 .cta-box .ct{font-size:12px;color:#93c5fd;margin-bottom:5px}
 .cta-box .ctt{font-size:20px;font-weight:900;color:#fff;line-height:1.3;letter-spacing:-.5px}
 .cta-box .ctb{font-size:12px;color:#bfdbfe;margin-top:8px;line-height:1.6}
-/* 기존 추정분담금 카드 — 심플 버전 */
+/* 대림 DL이앤씨 히어로 카드 — 브랜드 네이비 */
+.dl-hero{border-radius:18px;overflow:hidden;margin-bottom:14px;box-shadow:0 6px 28px rgba(13,31,60,.35)}
+.dl-hero-head{background:#0D1F3C;padding:14px 20px 12px;display:flex;align-items:center;justify-content:space-between}
+.dl-hero-head .dh-left .dh-badge{display:inline-block;background:#E8EDF5;color:#0D1F3C;font-size:10px;font-weight:900;padding:3px 10px;border-radius:999px;margin-bottom:6px}
+.dl-hero-head .dh-left .dh-name{font-size:17px;font-weight:900;color:#fff;line-height:1.3}
+.dl-hero-head .dh-left .dh-sub{font-size:11px;color:rgba(255,255,255,.6);margin-top:2px}
+.dl-hero-head .dh-right{font-size:26px}
+.dl-hero-body{background:#1B3A6B;padding:20px 20px 16px;text-align:center}
+.dl-hero-body .dh-lbl{font-size:11px;font-weight:700;background:rgba(255,255,255,.2);color:#fff;padding:4px 12px;border-radius:999px;display:inline-block;margin-bottom:10px}
+.dl-hero-body .dh-amt{font-size:28px;font-weight:900;color:#fff !important;line-height:1.3;word-break:break-all;overflow-wrap:anywhere}
+.dl-hero-body .dh-amt.refund{color:#6ee7b7 !important}
+.dl-hero-foot{background:#0D1F3C;padding:8px 16px;text-align:center;font-size:11px;font-weight:700;color:#A8BDD8;border-top:1px solid rgba(255,255,255,.1)}
+/* 기존 추정분담금 — 3열 안 소형 카드 */
 .doc-card{border:2px solid #1a2744;border-radius:14px;overflow:hidden;margin-bottom:14px}
 .doc-header{background:#1a2744;padding:10px 14px;text-align:center}
 .doc-header .doc-title{font-size:14px;font-weight:900;color:#fff;letter-spacing:1px}
@@ -113,6 +125,20 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
 .doc-body .doc-val.refund{color:#16a34a}
 .doc-note{background:#f0f3fa;padding:8px 12px;border-top:1px solid #dce3f0}
 .doc-note p{font-size:10px;color:#4b5563;line-height:1.6}
+/* 기존추정 소형 (3열 안) — 톤다운 그레이 */
+.doc-mini{border-radius:14px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.1);height:100%}
+.doc-mini .dm-head{background:#6b7280;padding:13px 8px 11px;text-align:center}
+.doc-mini .dm-head .bdg{display:inline-block;background:rgba(255,255,255,.2);color:#fff;font-size:9px;font-weight:700;padding:3px 9px;border-radius:999px;margin-bottom:7px}
+.doc-mini .dm-head .hn{font-size:11px;font-weight:700;color:#fff;line-height:1.4}
+.doc-mini .dm-head .hd{font-size:9px;color:rgba(255,255,255,.65);margin-top:3px}
+.doc-mini .dm-body{background:#e5e7eb;padding:14px 6px 12px;text-align:center;border-left:1.5px solid #9ca3af;border-right:1.5px solid #9ca3af}
+.doc-mini .dm-body .rl{font-size:9px;font-weight:700;background:#d1d5db;color:#4b5563;padding:3px 8px;border-radius:999px;display:inline-block;margin-bottom:8px}
+.doc-mini .dm-body .ra{font-size:13px;font-weight:900;color:#374151;line-height:1.35;word-break:break-all;overflow-wrap:anywhere}
+.doc-mini .dm-body .ra.refund{color:#374151}
+.doc-mini .dm-foot{background:#e5e7eb;padding:7px 4px;text-align:center;font-size:10px;font-weight:700;color:#6b7280;border:1.5px solid #9ca3af;border-top:1px solid #d1d5db}
+/* 대림 DL이앤씨 히어로 카드 — 금액 흰색 강조 */
+.dl-hero-body .dh-amt{font-size:28px;font-weight:900;color:#fff;line-height:1.3;word-break:break-all;overflow-wrap:anywhere}
+.dl-hero-body .dh-amt.refund{color:#6ee7b7}
 /* CHART — bar labels always outside bar */
 .chart-wrap{background:#fff;border-radius:16px;border:1px solid #e5e7eb;padding:18px 16px;margin-bottom:12px;box-shadow:0 1px 6px rgba(0,0,0,.05)}
 .chart-title{font-size:13px;font-weight:700;color:#374151;margin-bottom:3px}
@@ -122,12 +148,12 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
 .bar-name{width:60px;font-size:10px;font-weight:700;color:#374151;flex-shrink:0;line-height:1.4;padding-right:8px;text-align:right}
 .bar-track{flex:1;position:relative;height:34px}
 .bar-track::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:1.5px;background:#d1d5db;z-index:2}
-.bar-left{position:absolute;right:50%;top:4px;bottom:4px;border-radius:5px 0 0 5px;transition:width .7s cubic-bezier(.4,0,.2,1);overflow:hidden;display:flex;align-items:center;justify-content:center}
-.bar-right{position:absolute;left:50%;top:4px;bottom:4px;border-radius:0 5px 5px 0;transition:width .7s cubic-bezier(.4,0,.2,1);overflow:hidden;display:flex;align-items:center;justify-content:center}
-/* 바 안 라벨 — 흰 글씨 + 컬러 외곽선 */
-.bar-inner-lbl{font-size:9.5px;font-weight:700;color:#fff;white-space:nowrap;padding:0 5px;line-height:1;flex-shrink:0}
-.bar-inner-lbl.burden-lbl{text-shadow:-1px -1px 0 #991b1b,1px -1px 0 #991b1b,-1px 1px 0 #991b1b,1px 1px 0 #991b1b,0 0 4px rgba(153,27,27,.6)}
-.bar-inner-lbl.refund-lbl{text-shadow:-1px -1px 0 #1e40af,1px -1px 0 #1e40af,-1px 1px 0 #1e40af,1px 1px 0 #1e40af,0 0 4px rgba(30,64,175,.6)}
+.bar-left{position:absolute;right:50%;top:4px;bottom:4px;border-radius:5px 0 0 5px;transition:width .7s cubic-bezier(.4,0,.2,1)}
+.bar-right{position:absolute;left:50%;top:4px;bottom:4px;border-radius:0 5px 5px 0;transition:width .7s cubic-bezier(.4,0,.2,1)}
+/* 라벨: 바 위에 절대위치 → 절대 짤리지 않음 */
+.bar-track-lbl{position:absolute;top:50%;transform:translateX(-50%) translateY(-50%);font-size:9.5px;font-weight:700;white-space:nowrap;z-index:5;pointer-events:none;transition:left .7s cubic-bezier(.4,0,.2,1);color:#fff}
+.bar-track-lbl.burden-lbl{text-shadow:-1px -1px 0 #991b1b,1px -1px 0 #991b1b,-1px 1px 0 #991b1b,1px 1px 0 #991b1b,0 0 4px rgba(153,27,27,.6)}
+.bar-track-lbl.refund-lbl{text-shadow:-1px -1px 0 #1e40af,1px -1px 0 #1e40af,-1px 1px 0 #1e40af,1px 1px 0 #1e40af,0 0 4px rgba(30,64,175,.6)}
 .chart-legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding-top:12px;border-top:1px solid #f3f4f6}
 .leg-item{display:flex;align-items:center;gap:4px;font-size:10px;color:#6b7280}
 .leg-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0}
@@ -155,8 +181,25 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
 .pw-btn-ok{border:none;border-radius:11px;padding:13px;font-size:14px;font-weight:700;font-family:'Noto Sans KR',sans-serif;color:#fff;background:#1d4ed8;cursor:pointer}
 .pw-btn-ok:active{filter:brightness(.9)}
 .pw-btn-cancel:active{background:#f9fafb}
-/* 실시간 변동 티커 */
-.tick-area{padding:8px 6px 6px;border-top:1px solid rgba(255,255,255,.18);display:none}
+/* ── 분담금 증가 강조 애니메이션 ── */
+@keyframes amtPulse{
+  0%  {transform:scale(1)}
+  20% {transform:scale(1.06)}
+  50% {transform:scale(1.03)}
+  100%{transform:scale(1)}
+}
+@keyframes amtGlow{
+  0%  {text-shadow:0 0 0 transparent}
+  30% {text-shadow:0 0 12px rgba(239,68,68,.8),0 0 24px rgba(239,68,68,.4)}
+  100%{text-shadow:0 0 0 transparent}
+}
+@keyframes flyUp{
+  0%  {opacity:1;transform:translateX(-50%) translateY(0)}
+  100%{opacity:0;transform:translateX(-50%) translateY(-28px)}
+}
+.amt-pulse{animation:amtPulse .4s ease-out,amtGlow .6s ease-out}
+.fly-chip{position:absolute;left:50%;transform:translateX(-50%);font-size:11px;font-weight:900;color:#ef4444;white-space:nowrap;pointer-events:none;animation:flyUp .7s ease-out forwards;z-index:10}
+.fly-chip-blue{color:#6ee7b7}
 .sc-gsb .tick-area,.sc-gsw .tick-area{border-top-color:rgba(0,0,0,.09)}
 .tick-hd{display:flex;align-items:center;gap:4px;margin-bottom:4px}
 .tick-live-dot{width:5px;height:5px;border-radius:50%;background:#4ade80;flex-shrink:0;animation:blink 1s infinite}
@@ -175,6 +218,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
   <div class="hdr">
     <div class="org">상대원2구역 주택재개발정비사업조합</div>
     <h1>분담금 비교 계산기</h1>
+    <div class="pill"><span class="ldot"></span>지금까지 <strong id="cntVal" style="margin:0 3px">0</strong>명이 조회했습니다</div>
   </div>
   <div id="formBox">
     <div class="card"><label>이름</label><input class="inp" type="text" id="iName" placeholder="홍길동" maxlength="10" autocomplete="name"></div>
@@ -207,40 +251,34 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
   </div>
   <div class="res-box" id="resBox">
     <div class="res-hdr"><div class="rname" id="rName"></div><div class="rsub">시나리오별 환급금 / 추가분담금</div></div>
-    <!-- 기존 추정분담금 (관리처분계획안 기준) -->
-    <div class="doc-card">
-      <div class="doc-header">
-        <div class="doc-title">기존 조합안내</div>
-        <div class="doc-sub">관리처분계획(안) 기준 · 비례율 130.33%</div>
-      </div>
-      <div class="doc-body">
-        <div class="doc-lbl" id="doc-lbl">추가분담금</div>
-        <div class="doc-val" id="doc-result">—</div>
-      </div>
-      <div class="doc-note"><p>※ 위 금액은 관리처분계획(안) 당시 기준 추정치이며, 현재 건설사 변경 등으로 달라질 수 있습니다.</p></div>
-    </div>
-    <div class="three-cols">
-      <div class="sc-card sc-dl">
-        <div class="sc-head"><span class="bdg">★ 최선</span><div class="hn">대림<br>DL이앤씨</div><div class="hd">6월 착공 확정</div></div>
-        <div class="sc-body">
-          <div class="rl" id="lbl1">추가분담금</div>
-          <div class="ra" id="amt1">—</div>
-          <div class="tick-area" id="tArea1">
-            <div class="tick-hd"><span class="tick-live-dot"></span><span class="tick-since">4.11 이후 누적 변동</span></div>
-            <div class="tick-delta" id="tDelta1">—</div>
-          </div>
+    <!-- 대림 DL이앤씨 히어로 카드 (강조) -->
+    <div class="dl-hero">
+      <div class="dl-hero-head">
+        <div class="dh-left">
+          <div class="dh-badge">★ 최선 · 가장 유리</div>
+          <div class="dh-name">대림(DL이앤씨) 6월 착공</div>
+          <div class="dh-sub">착공 확정 · 위약금 조항 포함</div>
         </div>
-        <div class="sc-foot">🏆 가장 유리</div>
+        <div class="dh-right">🏆</div>
+      </div>
+      <div class="dl-hero-body">
+        <div class="dh-lbl" id="lbl1">추가분담금</div>
+        <div class="dh-amt" id="amt1">—</div>
+      </div>
+      <div class="dl-hero-foot">GS건설 대비 수천만 원 ~ 수억 원 절감</div>
+    </div>
+    <!-- 기존추정 + GS 비교 3열 -->
+    <div class="three-cols">
+      <div class="doc-mini">
+        <div class="dm-head"><span class="bdg">관리처분계획안</span><div class="hn">기존<br>추정분담금</div><div class="hd">비례율 130.33%</div></div>
+        <div class="dm-body"><div class="rl" id="doc-lbl">추가분담금</div><div class="ra" id="doc-result">—</div></div>
+        <div class="dm-foot">기존 추정치</div>
       </div>
       <div class="sc-card sc-gsb">
         <div class="sc-head"><span class="bdg">▲ 위험</span><div class="hn">GS건설<br>8월 착공</div><div class="hd">손해배상금 지불시</div></div>
         <div class="sc-body">
           <div class="rl" id="lbl2">추가분담금</div>
           <div class="ra" id="amt2">—</div>
-          <div class="tick-area" id="tArea2">
-            <div class="tick-hd"><span class="tick-live-dot"></span><span class="tick-since">4.11 이후 누적 변동</span></div>
-            <div class="tick-delta" id="tDelta2">—</div>
-          </div>
         </div>
         <div class="sc-foot">손실 발생</div>
       </div>
@@ -249,10 +287,6 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
         <div class="sc-body">
           <div class="rl" id="lbl3">추가분담금</div>
           <div class="ra" id="amt3">—</div>
-          <div class="tick-area" id="tArea3">
-            <div class="tick-hd"><span class="tick-live-dot"></span><span class="tick-since">4.11 이후 누적 변동</span></div>
-            <div class="tick-delta" id="tDelta3">—</div>
-          </div>
         </div>
         <div class="sc-foot">막대한 손실</div>
       </div>
@@ -262,37 +296,41 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
       <div class="chart-sub">← 추가분담금 많을수록 불리 &nbsp;|&nbsp; 환급금 많을수록 유리 →</div>
       <div>
         <div class="bar-row">
-          <div class="bar-name">기존<br>조합 안내</div>
+          <div class="bar-name">기존<br>추정</div>
           <div class="bar-track">
-            <div class="bar-left"  id="bl0" style="width:0;background:#7c3aed"><span class="bar-inner-lbl" id="bvL0"></span></div>
-            <div class="bar-right" id="br0" style="width:0;background:#22c55e"><span class="bar-inner-lbl" id="bvR0"></span></div>
+            <div class="bar-left"  id="bl0" style="width:0;background:#6b7280"></div>
+            <div class="bar-right" id="br0" style="width:0;background:#22c55e"></div>
+            <span class="bar-track-lbl" id="bv0"></span>
           </div>
         </div>
         <div class="bar-row">
           <div class="bar-name">DL이앤씨<br>6월 착공</div>
           <div class="bar-track">
-            <div class="bar-left"  id="bl1" style="width:0;background:#1d4ed8"><span class="bar-inner-lbl" id="bvL1"></span></div>
-            <div class="bar-right" id="br1" style="width:0;background:#22c55e"><span class="bar-inner-lbl" id="bvR1"></span></div>
+            <div class="bar-left"  id="bl1" style="width:0;background:#0D1F3C"></div>
+            <div class="bar-right" id="br1" style="width:0;background:#22c55e"></div>
+            <span class="bar-track-lbl" id="bv1"></span>
           </div>
         </div>
         <div class="bar-row">
           <div class="bar-name">GS건설<br>8월 착공</div>
           <div class="bar-track">
-            <div class="bar-left"  id="bl2" style="width:0;background:#ea580c"><span class="bar-inner-lbl" id="bvL2"></span></div>
-            <div class="bar-right" id="br2" style="width:0;background:#22c55e"><span class="bar-inner-lbl" id="bvR2"></span></div>
+            <div class="bar-left"  id="bl2" style="width:0;background:#ea580c"></div>
+            <div class="bar-right" id="br2" style="width:0;background:#22c55e"></div>
+            <span class="bar-track-lbl" id="bv2"></span>
           </div>
         </div>
         <div class="bar-row">
           <div class="bar-name">GS건설<br>28년 착공</div>
           <div class="bar-track">
-            <div class="bar-left"  id="bl3" style="width:0;background:#dc2626"><span class="bar-inner-lbl" id="bvL3"></span></div>
-            <div class="bar-right" id="br3" style="width:0;background:#22c55e"><span class="bar-inner-lbl" id="bvR3"></span></div>
+            <div class="bar-left"  id="bl3" style="width:0;background:#dc2626"></div>
+            <div class="bar-right" id="br3" style="width:0;background:#22c55e"></div>
+            <span class="bar-track-lbl" id="bv3"></span>
           </div>
         </div>
       </div>
       <div class="chart-legend">
-        <div class="leg-item"><div class="leg-dot" style="background:#7c3aed"></div>기존추정</div>
-        <div class="leg-item"><div class="leg-dot" style="background:#1d4ed8"></div>대림</div>
+        <div class="leg-item"><div class="leg-dot" style="background:#6b7280"></div>기존추정</div>
+        <div class="leg-item"><div class="leg-dot" style="background:#0D1F3C"></div>대림</div>
         <div class="leg-item"><div class="leg-dot" style="background:#ea580c"></div>GS최상</div>
         <div class="leg-item"><div class="leg-dot" style="background:#dc2626"></div>GS최악</div>
         <div class="leg-item"><div class="leg-dot" style="background:#22c55e"></div>환급금</div>
@@ -336,6 +374,10 @@ var PRICES={'59':UNIT[59],'74':UNIT[74],'84':UNIT[84],'101':UNIT[101],'59+59':UN
 var CNT_KEY='sangdaewon2_cnt';
 var selKey=null;
 
+/* 카운터 */
+function getCnt(){try{return parseInt(localStorage.getItem(CNT_KEY)||'0');}catch{return 0;}}
+function incCnt(){try{var n=getCnt()+1;localStorage.setItem(CNT_KEY,n);document.getElementById('cntVal').textContent=n;}catch{}}
+document.getElementById('cntVal').textContent=getCnt();
 
 /* 평형 선택 */
 function sPy(el){document.querySelectorAll('.seg-btn').forEach(function(b){b.classList.remove('sel');});el.classList.add('sel');selKey=el.dataset.key;}
@@ -401,7 +443,7 @@ function closePwModal(){
 }
 function confirmPw(){
   var val=document.getElementById('pwInput').value;
-  if(val==='9900'){
+  if(val==='5432'){
     closePwModal();
     doFetch();
   } else {
@@ -463,32 +505,56 @@ function showError(msg){
 
 /* 카드 결과 */
 function setCard(idx,result){
-  var lbl=document.getElementById('lbl'+idx);var amt=document.getElementById('amt'+idx);
-  if(result>=0){lbl.textContent='환급금';amt.textContent='+'+fw(result);amt.className='ra refund';}
-  else{lbl.textContent='추가분담금';amt.textContent=fw(Math.abs(result));amt.className='ra';}
+  var lbl=document.getElementById('lbl'+idx);
+  var amt=document.getElementById('amt'+idx);
+  if(!lbl||!amt) return;
+  if(idx===1){
+    /* DL 히어로 카드 */
+    if(result>=0){
+      lbl.textContent='환급금';
+      amt.textContent='+'+fw(result);
+      amt.className='dh-amt refund';
+      amt.style.color='#6ee7b7';
+    } else {
+      lbl.textContent='추가분담금';
+      amt.textContent=fw(Math.abs(result));
+      amt.className='dh-amt';
+      amt.style.color='#ffffff';
+    }
+  } else {
+    if(result>=0){lbl.textContent='환급금';amt.textContent='+'+fw(result);amt.className='ra refund';}
+    else{lbl.textContent='추가분담금';amt.textContent=fw(Math.abs(result));amt.className='ra';}
+  }
 }
 
-/* 차트 — 라벨을 바 안에 검정으로 표시 */
+/* 차트 — 라벨을 바 위 절대위치(바 중앙)에 배치 → 짤림 없음 */
 function drawBar(idx, result, maxAbs){
   var pct = maxAbs > 0 ? (Math.abs(result) / maxAbs) * 44 : 0;
-  var bl = document.getElementById('bl'+idx);
-  var br = document.getElementById('br'+idx);
-  var lblL = document.getElementById('bvL'+idx);
-  var lblR = document.getElementById('bvR'+idx);
+  var bl  = document.getElementById('bl'+idx);
+  var br  = document.getElementById('br'+idx);
+  var lbl = document.getElementById('bv'+idx);
   bl.style.width='0'; br.style.width='0';
-  if(lblL) lblL.textContent='';
-  if(lblR) lblR.textContent='';
+  if(lbl){ lbl.textContent=''; lbl.style.left='50%'; }
+
   setTimeout(function(){
     if(result < 0){
+      /* 분담금: 바가 왼쪽으로 뻗음 → 라벨을 바 중앙(50% - pct/2) 에 */
       bl.style.width = pct+'%';
       br.style.width = '0';
-      if(lblL){ lblL.className='bar-inner-lbl burden-lbl'; lblL.textContent=fwBar(result); }
-      if(lblR){ lblR.className='bar-inner-lbl'; lblR.textContent=''; }
+      if(lbl){
+        lbl.className = 'bar-track-lbl burden-lbl';
+        lbl.style.left = (50 - pct/2) + '%';
+        lbl.textContent = fwBar(result);
+      }
     } else {
+      /* 환급금: 바가 오른쪽으로 뻗음 → 라벨을 바 중앙(50% + pct/2) 에 */
       bl.style.width = '0';
       br.style.width = pct+'%';
-      if(lblL){ lblL.className='bar-inner-lbl'; lblL.textContent=''; }
-      if(lblR){ lblR.className='bar-inner-lbl refund-lbl'; lblR.textContent='+'+fwBar(result); }
+      if(lbl){
+        lbl.className = 'bar-track-lbl refund-lbl';
+        lbl.style.left = (50 + pct/2) + '%';
+        lbl.textContent = '+'+fwBar(result);
+      }
     }
   }, 120);
 }
@@ -503,7 +569,7 @@ function drawChart(r0, r1, r2, r3){
 
 /* ─── 실시간 변동 티커 ─── */
 /* 기준일: 2026-04-01 00:00:00 KST */
-var TICK_START = new Date('2026-04-11T00:00:00+09:00');
+var TICK_START = new Date('2026-04-01T00:00:00+09:00');
 var tickInterval = null;
 var tickBases = {}; /* {1: r1, 2: r2, 3: r3}  양수=환급금, 음수=분담금 */
 
@@ -521,41 +587,61 @@ function fwTick(n){
   return abs.toLocaleString('ko-KR') + '원';
 }
 
+function spawnFlyChip(amtEl, isRefund){
+  /* amtEl의 부모에 상대적으로 "▲ +1원" 칩이 위로 날아오름 */
+  var parent = amtEl.parentElement;
+  if(!parent) return;
+  var style = window.getComputedStyle(parent);
+  if(style.position === 'static') parent.style.position = 'relative';
+  var chip = document.createElement('span');
+  chip.className = 'fly-chip' + (isRefund ? ' fly-chip-blue' : '');
+  chip.textContent = isRefund ? '▼ -1원' : '▲ +1원';
+  parent.appendChild(chip);
+  setTimeout(function(){ if(chip.parentNode) chip.parentNode.removeChild(chip); }, 750);
+}
+
 function renderOneTick(i, elapsed){
   var base = tickBases[i];
   if(base === undefined) return;
 
-  /* ① 카드 메인 금액 동적 업데이트 */
-  var adjusted = base - elapsed; /* 환급금이든 분담금이든 시간이 지날수록 불리 */
+  var adjusted = base - elapsed;
   var lbl = document.getElementById('lbl'+i);
   var amt = document.getElementById('amt'+i);
-  if(lbl && amt){
-    if(adjusted >= 0){
-      lbl.textContent = '환급금';
-      amt.textContent = '+' + fw(adjusted);
-      amt.className = 'ra refund';
-    } else {
-      lbl.textContent = '추가분담금';
-      amt.textContent = fw(Math.abs(adjusted));
-      amt.className = 'ra';
-    }
-  }
-
-  /* ② 하단 델타 표시 — flash 효과 */
-  var el = document.getElementById('tDelta'+i);
-  if(!el) return;
   var isRefund = base >= 0;
-  el.classList.add('flash');
-  setTimeout(function(){
-    el.classList.remove('flash');
-    if(isRefund){
-      el.className = 'tick-delta dec';
-      el.textContent = '▼ -' + fwTick(elapsed) + ' 감소';
+
+  if(lbl && amt){
+    /* 금액 업데이트 */
+    if(i === 1){
+      /* DL 히어로 카드 */
+      if(adjusted >= 0){
+        lbl.textContent = '환급금';
+        amt.textContent = '+' + fw(adjusted);
+        amt.className = 'dh-amt refund';
+        amt.style.color = '#6ee7b7';
+      } else {
+        lbl.textContent = '추가분담금';
+        amt.textContent = fw(Math.abs(adjusted));
+        amt.className = 'dh-amt';
+        amt.style.color = '#ffffff';
+      }
     } else {
-      el.className = 'tick-delta inc';
-      el.textContent = '▲ +' + fwTick(elapsed) + ' 증가';
+      if(adjusted >= 0){
+        lbl.textContent = '환급금';
+        amt.textContent = '+' + fw(adjusted);
+        amt.className = 'ra refund';
+      } else {
+        lbl.textContent = '추가분담금';
+        amt.textContent = fw(Math.abs(adjusted));
+        amt.className = 'ra';
+      }
     }
-  }, 80);
+
+    /* ★ 강조 효과: 펄스 + 날아오르는 칩 */
+    amt.classList.remove('amt-pulse');
+    void amt.offsetWidth; /* reflow trigger */
+    amt.classList.add('amt-pulse');
+    spawnFlyChip(amt, isRefund);
+  }
 }
 
 function updateAllTickers(){
@@ -599,11 +685,11 @@ function showResult(name, address, data, key){
   if(docRes>=0){
     docLbl.textContent='환급금';
     docVal.textContent='+'+fw(docRes);
-    docVal.className='doc-val refund';
+    docVal.className='ra refund';
   } else {
     docLbl.textContent='추가분담금';
     docVal.textContent=fw(Math.abs(docRes));
-    docVal.className='doc-val burden';
+    docVal.className='ra';
   }
 
   /* 시나리오별 분담금 */
@@ -616,8 +702,8 @@ function showResult(name, address, data, key){
 
   var d12=Math.abs(r2-r1), d13=Math.abs(r3-r1);
   var sm=document.getElementById('saveMsg');
-  if(r1>=0){sm.innerHTML='대림(6월 착공) 시 <strong>환급금 발생!</strong> GS(소송 지연) 대비 <strong>'+fw(d13)+'</strong> 이득입니다.';}
-  else{sm.innerHTML='대림(6월 착공) 선택 시 GS(8월 착공)보다 <strong>'+fw(d12)+'</strong>, GS(소송 지연) 보다 <strong>'+fw(d13)+'</strong> 절감!';}
+  if(r1>=0){sm.innerHTML='대림 착공 시 <strong>환급금 발생!</strong> GS 최악 대비 <strong>'+fw(d13)+'</strong> 이득입니다.';}
+  else{sm.innerHTML='대림 선택 시 GS 최상보다 <strong>'+fw(d12)+'</strong>, GS 최악보다 <strong>'+fw(d13)+'</strong> 절감!';}
 
   document.getElementById('resBox').style.display='block';
   window.scrollTo({top:0,behavior:'smooth'});
