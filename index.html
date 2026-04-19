@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-<title>상대원2구역 분담금 계산기</title>
+<title>상대원2구역 분담금 비교 계산기</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
 <style>
@@ -64,7 +64,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
 .sc-dl .sc-head .hd{font-size:9px;color:rgba(255,255,255,.7);margin-top:3px}
 .sc-dl .sc-body{background:#1e40af;padding:16px 8px 14px;text-align:center}
 .sc-dl .sc-body .rl{font-size:9px;font-weight:700;background:#bfdbfe;color:#1e3a8a;padding:3px 8px;border-radius:999px;display:inline-block;margin-bottom:8px}
-.sc-dl .sc-body .ra{font-size:14px;font-weight:900;color:#fff;line-height:1.3;word-break:keep-all}
+.sc-dl .sc-body .ra{font-size:13px;font-weight:900;color:#fff;line-height:1.35;word-break:break-all;overflow-wrap:anywhere}
 .sc-dl .sc-body .ra.refund{color:#6ee7b7}
 .sc-dl .sc-foot{background:#1d4ed8;padding:7px 4px;text-align:center;font-size:10px;font-weight:900;color:#fbbf24;border-top:1px solid rgba(255,255,255,.15)}
 .sc-gsb .sc-head{background:#ea580c;padding:14px 8px 12px;text-align:center}
@@ -73,7 +73,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
 .sc-gsb .sc-head .hd{font-size:9px;color:rgba(255,255,255,.75);margin-top:3px}
 .sc-gsb .sc-body{background:#fff7ed;padding:16px 8px 14px;text-align:center;border-left:2px solid #ea580c;border-right:2px solid #ea580c}
 .sc-gsb .sc-body .rl{font-size:9px;font-weight:700;background:#fed7aa;color:#9a3412;padding:3px 8px;border-radius:999px;display:inline-block;margin-bottom:8px}
-.sc-gsb .sc-body .ra{font-size:14px;font-weight:900;color:#c2410c;line-height:1.3;word-break:keep-all}
+.sc-gsb .sc-body .ra{font-size:13px;font-weight:900;color:#c2410c;line-height:1.35;word-break:break-all;overflow-wrap:anywhere}
 .sc-gsb .sc-body .ra.refund{color:#16a34a}
 .sc-gsb .sc-foot{background:#fff7ed;padding:7px 4px;text-align:center;font-size:10px;font-weight:700;color:#9a3412;border:2px solid #ea580c;border-top:1px solid #fed7aa}
 .sc-gsw .sc-head{background:#dc2626;padding:14px 8px 12px;text-align:center}
@@ -82,24 +82,9 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
 .sc-gsw .sc-head .hd{font-size:9px;color:rgba(255,255,255,.75);margin-top:3px}
 .sc-gsw .sc-body{background:#fff1f2;padding:16px 8px 14px;text-align:center;border-left:2px solid #dc2626;border-right:2px solid #dc2626}
 .sc-gsw .sc-body .rl{font-size:9px;font-weight:700;background:#fecdd3;color:#9f1239;padding:3px 8px;border-radius:999px;display:inline-block;margin-bottom:8px}
-.sc-gsw .sc-body .ra{font-size:14px;font-weight:900;color:#dc2626;line-height:1.3;word-break:keep-all}
+.sc-gsw .sc-body .ra{font-size:13px;font-weight:900;color:#dc2626;line-height:1.35;word-break:break-all;overflow-wrap:anywhere}
 .sc-gsw .sc-body .ra.refund{color:#16a34a}
 .sc-gsw .sc-foot{background:#fff1f2;padding:7px 4px;text-align:center;font-size:10px;font-weight:700;color:#991b1b;border:2px solid #dc2626;border-top:1px solid #fecdd3}
-/* CHART */
-.chart-wrap{background:#fff;border-radius:16px;border:1px solid #e5e7eb;padding:18px 16px;margin-bottom:12px;box-shadow:0 1px 6px rgba(0,0,0,.05)}
-.chart-title{font-size:13px;font-weight:700;color:#374151;margin-bottom:3px}
-.chart-sub{font-size:11px;color:#9ca3af;margin-bottom:18px}
-.bar-row{display:flex;align-items:center;margin-bottom:12px}
-.bar-row:last-child{margin-bottom:0}
-.bar-name{width:56px;font-size:10px;font-weight:700;color:#374151;flex-shrink:0;line-height:1.4;padding-right:8px;text-align:right}
-.bar-track{flex:1;position:relative;height:36px}
-.bar-track::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:1.5px;background:#d1d5db;z-index:1}
-.bar-left{position:absolute;right:50%;top:4px;bottom:4px;border-radius:6px 0 0 6px;transition:width .7s cubic-bezier(.4,0,.2,1);overflow:hidden;display:flex;align-items:center;justify-content:flex-end}
-.bar-right{position:absolute;left:50%;top:4px;bottom:4px;border-radius:0 6px 6px 0;transition:width .7s cubic-bezier(.4,0,.2,1);overflow:hidden;display:flex;align-items:center;justify-content:flex-start}
-.bar-inner-txt{font-size:10px;font-weight:700;color:#fff;white-space:nowrap;padding:0 7px;line-height:1}
-.chart-legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding-top:12px;border-top:1px solid #f3f4f6}
-.leg-item{display:flex;align-items:center;gap:4px;font-size:10px;color:#6b7280}
-.leg-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0}
 .save-banner{background:#f0fdf4;border:1.5px solid #bbf7d0;border-radius:14px;padding:13px 16px;display:flex;gap:9px;align-items:flex-start;margin-bottom:12px}
 .save-banner .si{font-size:16px;flex-shrink:0;margin-top:1px}
 .save-banner .st{font-size:13px;color:#15803d;font-weight:600;line-height:1.6}
@@ -116,6 +101,36 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
 .cta-box .ct{font-size:12px;color:#93c5fd;margin-bottom:5px}
 .cta-box .ctt{font-size:20px;font-weight:900;color:#fff;line-height:1.3;letter-spacing:-.5px}
 .cta-box .ctb{font-size:12px;color:#bfdbfe;margin-top:8px;line-height:1.6}
+/* 기존 추정분담금 카드 — 심플 버전 */
+.doc-card{border:2px solid #1a2744;border-radius:14px;overflow:hidden;margin-bottom:14px}
+.doc-header{background:#1a2744;padding:10px 14px;text-align:center}
+.doc-header .doc-title{font-size:14px;font-weight:900;color:#fff;letter-spacing:1px}
+.doc-header .doc-sub{font-size:10px;color:rgba(255,255,255,.65);margin-top:3px;letter-spacing:.3px}
+.doc-body{background:#fff;padding:18px 16px 14px;text-align:center}
+.doc-body .doc-lbl{font-size:12px;font-weight:700;color:#6b7280;margin-bottom:6px}
+.doc-body .doc-val{font-size:26px;font-weight:900;line-height:1.2;word-break:keep-all}
+.doc-body .doc-val.burden{color:#dc2626}
+.doc-body .doc-val.refund{color:#16a34a}
+.doc-note{background:#f0f3fa;padding:8px 12px;border-top:1px solid #dce3f0}
+.doc-note p{font-size:10px;color:#4b5563;line-height:1.6}
+/* CHART — bar labels always outside bar */
+.chart-wrap{background:#fff;border-radius:16px;border:1px solid #e5e7eb;padding:18px 16px;margin-bottom:12px;box-shadow:0 1px 6px rgba(0,0,0,.05)}
+.chart-title{font-size:13px;font-weight:700;color:#374151;margin-bottom:3px}
+.chart-sub{font-size:11px;color:#9ca3af;margin-bottom:18px}
+.bar-row{display:flex;align-items:center;margin-bottom:12px}
+.bar-row:last-child{margin-bottom:0}
+.bar-name{width:60px;font-size:10px;font-weight:700;color:#374151;flex-shrink:0;line-height:1.4;padding-right:8px;text-align:right}
+.bar-track{flex:1;position:relative;height:34px}
+.bar-track::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:1.5px;background:#d1d5db;z-index:2}
+.bar-left{position:absolute;right:50%;top:4px;bottom:4px;border-radius:5px 0 0 5px;transition:width .7s cubic-bezier(.4,0,.2,1);overflow:hidden;display:flex;align-items:center;justify-content:center}
+.bar-right{position:absolute;left:50%;top:4px;bottom:4px;border-radius:0 5px 5px 0;transition:width .7s cubic-bezier(.4,0,.2,1);overflow:hidden;display:flex;align-items:center;justify-content:center}
+/* 바 안 라벨 — 흰 글씨 + 컬러 외곽선 */
+.bar-inner-lbl{font-size:9.5px;font-weight:700;color:#fff;white-space:nowrap;padding:0 5px;line-height:1;flex-shrink:0}
+.bar-inner-lbl.burden-lbl{text-shadow:-1px -1px 0 #991b1b,1px -1px 0 #991b1b,-1px 1px 0 #991b1b,1px 1px 0 #991b1b,0 0 4px rgba(153,27,27,.6)}
+.bar-inner-lbl.refund-lbl{text-shadow:-1px -1px 0 #1e40af,1px -1px 0 #1e40af,-1px 1px 0 #1e40af,1px 1px 0 #1e40af,0 0 4px rgba(30,64,175,.6)}
+.chart-legend{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding-top:12px;border-top:1px solid #f3f4f6}
+.leg-item{display:flex;align-items:center;gap:4px;font-size:10px;color:#6b7280}
+.leg-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0}
 .notice{background:#f9fafb;border-radius:12px;padding:12px 15px;margin-bottom:10px;border:1px solid #e5e7eb}
 .notice p{font-size:11px;color:#9ca3af;line-height:1.7}
 .kakao-btn{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;background:#FEE500;border-radius:12px;padding:16px;font-size:15px;font-weight:700;font-family:'Noto Sans KR',sans-serif;color:#191919;text-decoration:none;margin-bottom:10px;-webkit-tap-highlight-color:transparent}
@@ -123,6 +138,36 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
 .kakao-ico{font-size:20px;line-height:1}
 .reset-btn{width:100%;border:1.5px solid #e5e7eb;border-radius:12px;padding:15px;font-size:15px;font-weight:700;font-family:'Noto Sans KR',sans-serif;color:#6b7280;background:#fff;cursor:pointer}
 .reset-btn:active{background:#f9fafb}
+/* 비밀번호 모달 */
+.pw-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:999;align-items:center;justify-content:center;padding:24px}
+.pw-overlay.show{display:flex}
+.pw-modal{background:#fff;border-radius:20px;padding:28px 24px 24px;width:100%;max-width:320px;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.pw-modal .pm-ico{font-size:32px;text-align:center;margin-bottom:10px}
+.pw-modal .pm-title{font-size:17px;font-weight:900;color:#111827;text-align:center;margin-bottom:4px}
+.pw-modal .pm-sub{font-size:13px;color:#6b7280;text-align:center;margin-bottom:18px}
+.pw-modal input{width:100%;border:1.5px solid #d1d5db;border-radius:11px;padding:14px 16px;font-size:22px;font-family:'Noto Sans KR',sans-serif;color:#111827;outline:none;text-align:center;letter-spacing:8px;transition:.2s}
+.pw-modal input:focus{border-color:#3b82f6;box-shadow:0 0 0 3px rgba(59,130,246,.12)}
+.pw-modal input.pw-err{border-color:#f43f5e;box-shadow:0 0 0 3px rgba(244,63,94,.1);animation:shake .3s}
+@keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.pw-err-msg{font-size:12px;color:#e11d48;font-weight:600;text-align:center;margin-top:8px;min-height:18px}
+.pw-btn-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}
+.pw-btn-cancel{border:1.5px solid #e5e7eb;border-radius:11px;padding:13px;font-size:14px;font-weight:700;font-family:'Noto Sans KR',sans-serif;color:#6b7280;background:#fff;cursor:pointer}
+.pw-btn-ok{border:none;border-radius:11px;padding:13px;font-size:14px;font-weight:700;font-family:'Noto Sans KR',sans-serif;color:#fff;background:#1d4ed8;cursor:pointer}
+.pw-btn-ok:active{filter:brightness(.9)}
+.pw-btn-cancel:active{background:#f9fafb}
+/* 실시간 변동 티커 */
+.tick-area{padding:8px 6px 6px;border-top:1px solid rgba(255,255,255,.18);display:none}
+.sc-gsb .tick-area,.sc-gsw .tick-area{border-top-color:rgba(0,0,0,.09)}
+.tick-hd{display:flex;align-items:center;gap:4px;margin-bottom:4px}
+.tick-live-dot{width:5px;height:5px;border-radius:50%;background:#4ade80;flex-shrink:0;animation:blink 1s infinite}
+.tick-since{font-size:8px;font-weight:700;color:rgba(255,255,255,.55);white-space:nowrap;letter-spacing:.2px}
+.sc-gsb .tick-since,.sc-gsw .tick-since{color:#9ca3af}
+.tick-delta{font-size:11px;font-weight:900;line-height:1.3;word-break:keep-all;transition:opacity .18s}
+.tick-delta.inc{color:#fca5a5}          /* 분담금 증가 — dark card */
+.tick-delta.dec{color:#fcd34d}          /* 환급금 감소 — dark card */
+.sc-gsb .tick-delta.inc,.sc-gsw .tick-delta.inc{color:#b91c1c}
+.sc-gsb .tick-delta.dec,.sc-gsw .tick-delta.dec{color:#b45309}
+.tick-delta.flash{opacity:.15}
 </style>
 </head>
 <body>
@@ -134,9 +179,9 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
   <div id="formBox">
     <div class="card"><label>이름</label><input class="inp" type="text" id="iName" placeholder="홍길동" maxlength="10" autocomplete="name"></div>
     <div class="card">
-      <label>종전자산평가액 <span class="hint">(*관리처분계획 통보서 참고)</span></label>
-      <input class="inp" type="text" id="iAsset" placeholder="300,000,000" inputmode="numeric" autocomplete="off" oninput="onAssetInput(this)">
-      <div class="err-msg" id="assetErr">⚠ 종전자산평가액은 100만원(1,000,000원) 이상이어야 합니다.</div>
+      <label>지번 <span class="hint">(예: 1234 또는 1234-1)</span></label>
+      <input class="inp" type="text" id="iAddress" placeholder="1234 또는 1234-1" autocomplete="off" inputmode="text">
+      <div class="err-msg" id="addrErr">⚠ 지번을 올바르게 입력해 주세요. (예: 1234 또는 1234-1)</div>
     </div>
     <div class="card">
       <label>선택 평형</label>
@@ -157,108 +202,437 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
     <button class="main-btn" onclick="startCalc()">분담금 알아보기 →</button>
   </div>
   <div class="load-box" id="loadBox">
-    <div class="spinner"></div><div class="ld-t">계산하는 중...</div><div class="ld-s">시나리오별 손실액을 계산 중입니다</div>
+    <div class="spinner"></div><div class="ld-t">조합원 정보를 조회하는 중...</div><div class="ld-s">지번으로 종전자산평가액을 불러오고 있습니다</div>
     <div class="lbar-wrap"><div class="lbar" id="lbar"></div></div><div class="lpct" id="lpct">0%</div>
   </div>
   <div class="res-box" id="resBox">
     <div class="res-hdr"><div class="rname" id="rName"></div><div class="rsub">시나리오별 환급금 / 추가분담금</div></div>
+    <!-- 기존 추정분담금 (관리처분계획안 기준) -->
+    <div class="doc-card">
+      <div class="doc-header">
+        <div class="doc-title">기존 조합안내</div>
+        <div class="doc-sub">관리처분계획(안) 기준 · 비례율 130.33%</div>
+      </div>
+      <div class="doc-body">
+        <div class="doc-lbl" id="doc-lbl">추가분담금</div>
+        <div class="doc-val" id="doc-result">—</div>
+      </div>
+      <div class="doc-note"><p>※ 위 금액은 관리처분계획(안) 당시 기준 추정치이며, 현재 건설사 변경 등으로 달라질 수 있습니다.</p></div>
+    </div>
     <div class="three-cols">
-      <div class="sc-card sc-dl"><div class="sc-head"><span class="bdg">★ 최선</span><div class="hn">대림<br>DL이앤씨</div><div class="hd">6월 착공 확정</div></div><div class="sc-body"><div class="rl" id="lbl1">추가분담금</div><div class="ra" id="amt1">—</div></div><div class="sc-foot">🏆 가장 유리</div></div>
-      <div class="sc-card sc-gsb"><div class="sc-head"><span class="bdg">▲ 위험</span><div class="hn">GS건설<br>8월 착공</div><div class="hd">최상 가정 시</div></div><div class="sc-body"><div class="rl" id="lbl2">추가분담금</div><div class="ra" id="amt2">—</div></div><div class="sc-foot">손실 발생</div></div>
-      <div class="sc-card sc-gsw"><div class="sc-head"><span class="bdg">✕ 최악</span><div class="hn">GS건설<br>28년 착공</div><div class="hd">소송 후 지연</div></div><div class="sc-body"><div class="rl" id="lbl3">추가분담금</div><div class="ra" id="amt3">—</div></div><div class="sc-foot">막대한 손실</div></div>
+      <div class="sc-card sc-dl">
+        <div class="sc-head"><span class="bdg">★ 최선</span><div class="hn">대림<br>DL이앤씨</div><div class="hd">6월 착공 확정</div></div>
+        <div class="sc-body">
+          <div class="rl" id="lbl1">추가분담금</div>
+          <div class="ra" id="amt1">—</div>
+          <div class="tick-area" id="tArea1">
+            <div class="tick-hd"><span class="tick-live-dot"></span><span class="tick-since">4.11 이후 누적 변동</span></div>
+            <div class="tick-delta" id="tDelta1">—</div>
+          </div>
+        </div>
+        <div class="sc-foot">🏆 가장 유리</div>
+      </div>
+      <div class="sc-card sc-gsb">
+        <div class="sc-head"><span class="bdg">▲ 위험</span><div class="hn">GS건설<br>8월 착공</div><div class="hd">최상 가정 시</div></div>
+        <div class="sc-body">
+          <div class="rl" id="lbl2">추가분담금</div>
+          <div class="ra" id="amt2">—</div>
+          <div class="tick-area" id="tArea2">
+            <div class="tick-hd"><span class="tick-live-dot"></span><span class="tick-since">4.11 이후 누적 변동</span></div>
+            <div class="tick-delta" id="tDelta2">—</div>
+          </div>
+        </div>
+        <div class="sc-foot">손실 발생</div>
+      </div>
+      <div class="sc-card sc-gsw">
+        <div class="sc-head"><span class="bdg">✕ 최악</span><div class="hn">GS건설<br>28년 착공</div><div class="hd">소송 후 지연</div></div>
+        <div class="sc-body">
+          <div class="rl" id="lbl3">추가분담금</div>
+          <div class="ra" id="amt3">—</div>
+          <div class="tick-area" id="tArea3">
+            <div class="tick-hd"><span class="tick-live-dot"></span><span class="tick-since">4.11 이후 누적 변동</span></div>
+            <div class="tick-delta" id="tDelta3">—</div>
+          </div>
+        </div>
+        <div class="sc-foot">막대한 손실</div>
+      </div>
     </div>
     <div class="chart-wrap">
       <div class="chart-title">한눈에 보는 비교 차트</div>
       <div class="chart-sub">← 추가분담금 많을수록 불리 &nbsp;|&nbsp; 환급금 많을수록 유리 →</div>
       <div>
-        <div class="bar-row"><div class="bar-name">대림<br>DL이앤씨</div><div class="bar-track"><div class="bar-left" id="bl1" style="width:0;background:#1d4ed8"><span class="bar-inner-txt" id="bt1"></span></div><div class="bar-right" id="br1" style="width:0;background:#22c55e"><span class="bar-inner-txt" id="bt1r"></span></div></div></div>
-        <div class="bar-row"><div class="bar-name">GS건설<br>8월 착공</div><div class="bar-track"><div class="bar-left" id="bl2" style="width:0;background:#ea580c"><span class="bar-inner-txt" id="bt2"></span></div><div class="bar-right" id="br2" style="width:0;background:#22c55e"><span class="bar-inner-txt" id="bt2r"></span></div></div></div>
-        <div class="bar-row"><div class="bar-name">GS건설<br>28년 착공</div><div class="bar-track"><div class="bar-left" id="bl3" style="width:0;background:#dc2626"><span class="bar-inner-txt" id="bt3"></span></div><div class="bar-right" id="br3" style="width:0;background:#22c55e"><span class="bar-inner-txt" id="bt3r"></span></div></div></div>
+        <div class="bar-row">
+          <div class="bar-name">기존<br>조합 안내</div>
+          <div class="bar-track">
+            <div class="bar-left"  id="bl0" style="width:0;background:#7c3aed"><span class="bar-inner-lbl" id="bvL0"></span></div>
+            <div class="bar-right" id="br0" style="width:0;background:#22c55e"><span class="bar-inner-lbl" id="bvR0"></span></div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-name">DL이앤씨<br>6월 착공</div>
+          <div class="bar-track">
+            <div class="bar-left"  id="bl1" style="width:0;background:#1d4ed8"><span class="bar-inner-lbl" id="bvL1"></span></div>
+            <div class="bar-right" id="br1" style="width:0;background:#22c55e"><span class="bar-inner-lbl" id="bvR1"></span></div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-name">GS건설<br>8월 착공</div>
+          <div class="bar-track">
+            <div class="bar-left"  id="bl2" style="width:0;background:#ea580c"><span class="bar-inner-lbl" id="bvL2"></span></div>
+            <div class="bar-right" id="br2" style="width:0;background:#22c55e"><span class="bar-inner-lbl" id="bvR2"></span></div>
+          </div>
+        </div>
+        <div class="bar-row">
+          <div class="bar-name">GS건설<br>28년 착공</div>
+          <div class="bar-track">
+            <div class="bar-left"  id="bl3" style="width:0;background:#dc2626"><span class="bar-inner-lbl" id="bvL3"></span></div>
+            <div class="bar-right" id="br3" style="width:0;background:#22c55e"><span class="bar-inner-lbl" id="bvR3"></span></div>
+          </div>
+        </div>
       </div>
       <div class="chart-legend">
-        <div class="leg-item"><div class="leg-dot" style="background:#1d4ed8"></div>추가분담금(대림)</div>
-        <div class="leg-item"><div class="leg-dot" style="background:#ea580c"></div>추가분담금(GS최상)</div>
-        <div class="leg-item"><div class="leg-dot" style="background:#dc2626"></div>추가분담금(GS최악)</div>
+        <div class="leg-item"><div class="leg-dot" style="background:#7c3aed"></div>기존추정</div>
+        <div class="leg-item"><div class="leg-dot" style="background:#1d4ed8"></div>대림</div>
+        <div class="leg-item"><div class="leg-dot" style="background:#ea580c"></div>GS최상</div>
+        <div class="leg-item"><div class="leg-dot" style="background:#dc2626"></div>GS최악</div>
         <div class="leg-item"><div class="leg-dot" style="background:#22c55e"></div>환급금</div>
       </div>
     </div>
     <div class="save-banner"><span class="si">💡</span><div class="st" id="saveMsg">계산 중...</div></div>
+    <div class="warn-cards">
+      <div class="wc wc-gs"><div class="wt">⚠️ GS 최상도 위험</div><p>분양가상한제 적용 시 추가 손실. 8월 착공도 불확실합니다.</p></div>
+      <div class="wc wc-worst"><div class="wt">🚨 소송 → 착공 지연</div><p>28년 착공 시 이자 부담 폭증. 입주 2년 이상 지연됩니다.</p></div>
+    </div>
     <div class="notice"><p>※ 본 계산 결과는 참고용이며, 실제 분담금은 관리처분계획 확정 후 결정됩니다.</p></div>
     <a class="kakao-btn" href="https://invite.kakao.com/tc/MRUHU80L73" target="_blank" rel="noopener">
       <span class="kakao-ico">💬</span>
-      다른 조합원 분담금은?
+      다른 조합원들 분담금 알아보러 가기
     </a>
     <button class="reset-btn" onclick="resetCalc()">← 다시 계산하기</button>
   </div>
 </div>
+
+<!-- 비밀번호 모달 -->
+<div class="pw-overlay" id="pwOverlay">
+  <div class="pw-modal">
+    <div class="pm-ico">🔒</div>
+    <div class="pm-title">비밀번호를 입력하세요</div>
+    <div class="pm-sub">조합원 전용 서비스입니다</div>
+    <input type="password" id="pwInput" inputmode="numeric" maxlength="10" placeholder="••••" autocomplete="off" onkeydown="if(event.key==='Enter')confirmPw()">
+    <div class="pw-err-msg" id="pwErrMsg"></div>
+    <div class="pw-btn-row">
+      <button class="pw-btn-cancel" onclick="closePwModal()">취소</button>
+      <button class="pw-btn-ok" onclick="confirmPw()">확인</button>
+    </div>
+  </div>
+</div>
+
 <script>
+/* ★ Apps Script 배포 URL을 여기에 입력하세요 */
+var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzNgIfYQgq-eAwh4wVRQRxKxwcfFRt7WDbg6HHln2OlOlnjpt7SsyjnOgP9pf4X7hNC/exec';
+
 var UNIT={59:458090000,74:506968917,84:564562617,101:631581598};
 var PRICES={'59':UNIT[59],'74':UNIT[74],'84':UNIT[84],'101':UNIT[101],'59+59':UNIT[59]*2,'59+84':UNIT[59]+UNIT[84],'59+101':UNIT[59]+UNIT[101]};
-var RATES={dl:1.4502,gsBest:0.9704,gsWorst:0.2961};
-var CNT_KEY='sangdaewon2_cnt';var selKey=null;
-function getCnt(){try{return parseInt(localStorage.getItem(CNT_KEY)||'0');}catch{return 0;}}
-function incCnt(){try{var n=getCnt()+1;localStorage.setItem(CNT_KEY,n);document.getElementById('cntVal').textContent=n;}catch{}}
-document.getElementById('cntVal').textContent=getCnt();
-function onAssetInput(el){
-  var raw=el.value.replace(/[^0-9]/g,'');
-  el.value=raw?parseInt(raw).toLocaleString('ko-KR'):'';
-  var v=parseInt(raw||'0');
-  var e=document.getElementById('assetErr');
-  if(raw&&v<1000000){el.classList.add('err');e.classList.add('show');}
-  else{el.classList.remove('err');e.classList.remove('show');}
-}
-function getAsset(){return parseInt(document.getElementById('iAsset').value.replace(/[^0-9]/g,'')||'0');}
+var CNT_KEY='sangdaewon2_cnt';
+var selKey=null;
+
+
+/* 평형 선택 */
 function sPy(el){document.querySelectorAll('.seg-btn').forEach(function(b){b.classList.remove('sel');});el.classList.add('sel');selKey=el.dataset.key;}
-function fw(n){var abs=Math.abs(Math.round(n));var eok=Math.floor(abs/100000000),rest=abs%100000000;var man=Math.floor(rest/10000),won=rest%10000;var p=[];if(eok>0)p.push(eok+'억');if(man>0)p.push(man.toLocaleString('ko-KR')+'만');if(won>0)p.push(won.toLocaleString('ko-KR'));return(p.length?p.join(' '):'0')+'원';}
-function fwBar(n){var abs=Math.abs(Math.round(n));var eok=Math.floor(abs/100000000),rest=abs%100000000;var man=Math.floor(rest/10000);var s='';if(eok>0){s=eok+'억';if(man>0)s+=' '+man+'만';}else if(man>0){s=man+'만';}else s='0원';return(n>=0?'+':'')+s;}
-function startCalc(){
-  var name=document.getElementById('iName').value.trim();var asset=getAsset();
-  if(!name){alert('이름을 입력해 주세요.');return;}
-  if(!asset||asset<1000000){var inp=document.getElementById('iAsset');inp.classList.add('err');document.getElementById('assetErr').classList.add('show');inp.focus();return;}
-  if(!selKey){alert('선택 평형을 골라 주세요.');return;}
-  document.getElementById('formBox').style.display='none';
-  var lb=document.getElementById('loadBox');lb.style.display='block';
-  var pct=0,bar=document.getElementById('lbar'),lp=document.getElementById('lpct');
-  var iv=setInterval(function(){pct=Math.min(pct+Math.random()*13+1,97);bar.style.width=pct.toFixed(0)+'%';lp.textContent=pct.toFixed(0)+'%';},100);
-  setTimeout(function(){clearInterval(iv);bar.style.width='100%';lp.textContent='100%';setTimeout(function(){lb.style.display='none';showResult(name,asset,selKey);incCnt();},380);},2000);
+
+/* 금액 포맷 */
+function fw(n){
+  var abs=Math.abs(Math.round(n));
+  var eok=Math.floor(abs/100000000),rest=abs%100000000;
+  var man=Math.floor(rest/10000),won=rest%10000;
+  var p=[];if(eok>0)p.push(eok+'억');if(man>0)p.push(man.toLocaleString('ko-KR')+'만');if(won>0)p.push(won.toLocaleString('ko-KR'));
+  return(p.length?p.join(' '):'0')+'원';
 }
+function fwBar(n){
+  var abs=Math.abs(Math.round(n));
+  var eok=Math.floor(abs/100000000),rest=abs%100000000;
+  var man=Math.floor(rest/10000);
+  var s='';if(eok>0){s=eok+'억';if(man>0)s+=' '+man+'만';}else if(man>0){s=man+'만';}else s='0원';
+  return(n>=0?'+':'')+s;
+}
+
+/* 로딩바 애니메이션 */
+var loadIv=null;
+function startBar(){
+  var pct=0,bar=document.getElementById('lbar'),lp=document.getElementById('lpct');
+  bar.style.width='0%'; lp.textContent='0%';
+  loadIv=setInterval(function(){
+    pct=Math.min(pct+Math.random()*8+1,90);
+    bar.style.width=pct.toFixed(0)+'%'; lp.textContent=pct.toFixed(0)+'%';
+  },150);
+}
+function finishBar(cb){
+  clearInterval(loadIv);
+  document.getElementById('lbar').style.width='100%';
+  document.getElementById('lpct').textContent='100%';
+  setTimeout(cb,350);
+}
+
+/* 비밀번호 모달 */
+var _pendingCalc = false;
+function startCalc(){
+  var name=document.getElementById('iName').value.trim();
+  var address=document.getElementById('iAddress').value.trim();
+  if(!name){alert('이름을 입력해 주세요.');return;}
+  if(!address){
+    var ai=document.getElementById('iAddress');
+    ai.classList.add('err');
+    document.getElementById('addrErr').classList.add('show');
+    ai.focus();return;
+  }
+  if(!selKey){alert('선택 평형을 골라 주세요.');return;}
+  /* 유효성 통과 → 비밀번호 모달 오픈 */
+  openPwModal();
+}
+function openPwModal(){
+  document.getElementById('pwInput').value='';
+  document.getElementById('pwErrMsg').textContent='';
+  document.getElementById('pwInput').classList.remove('pw-err');
+  document.getElementById('pwOverlay').classList.add('show');
+  setTimeout(function(){document.getElementById('pwInput').focus();},100);
+}
+function closePwModal(){
+  document.getElementById('pwOverlay').classList.remove('show');
+}
+function confirmPw(){
+  var val=document.getElementById('pwInput').value;
+  if(val==='0000'){
+    closePwModal();
+    doFetch();
+  } else {
+    var inp=document.getElementById('pwInput');
+    inp.classList.add('pw-err');
+    document.getElementById('pwErrMsg').textContent='비밀번호가 틀렸습니다. 다시 입력해 주세요.';
+    inp.value='';
+    setTimeout(function(){inp.classList.remove('pw-err');},400);
+    inp.focus();
+  }
+}
+
+/* 실제 API 호출 */
+function doFetch(){
+  var name=document.getElementById('iName').value.trim();
+  var address=document.getElementById('iAddress').value.trim();
+  /* 유효성 통과 — UI 전환 */
+  document.getElementById('iAddress').classList.remove('err');
+  document.getElementById('addrErr').classList.remove('show');
+  document.getElementById('formBox').style.display='none';
+  document.getElementById('loadBox').style.display='block';
+  startBar();
+
+  /* Apps Script GET 요청 */
+  var url=APPS_SCRIPT_URL+'?name='+encodeURIComponent(name)+'&address='+encodeURIComponent(address);
+  fetch(url)
+    .then(function(res){
+      if(!res.ok) throw new Error('서버 오류: '+res.status);
+      return res.json();
+    })
+    .then(function(data){
+      finishBar(function(){
+        document.getElementById('loadBox').style.display='none';
+        if(!data||data.error){
+          showError(data&&data.error?data.error:'해당 지번의 조합원 정보를 찾을 수 없습니다.');
+          return;
+        }
+        showResult(name, address, data, selKey);
+        incCnt();
+      });
+    })
+    .catch(function(err){
+      finishBar(function(){
+        document.getElementById('loadBox').style.display='none';
+        showError('데이터를 불러오는 중 오류가 발생했습니다.\n('+err.message+')');
+      });
+    });
+}
+
+/* 오류 표시 */
+function showError(msg){
+  document.getElementById('formBox').style.display='';
+  var ai=document.getElementById('iAddress');
+  ai.classList.add('err');
+  var errEl=document.getElementById('addrErr');
+  errEl.textContent='⚠ '+msg;
+  errEl.classList.add('show');
+}
+
+/* 카드 결과 */
 function setCard(idx,result){
   var lbl=document.getElementById('lbl'+idx);var amt=document.getElementById('amt'+idx);
   if(result>=0){lbl.textContent='환급금';amt.textContent='+'+fw(result);amt.className='ra refund';}
   else{lbl.textContent='추가분담금';amt.textContent=fw(Math.abs(result));amt.className='ra';}
 }
-function drawChart(r1,r2,r3){
-  var maxAbs=Math.max(Math.abs(r1),Math.abs(r2),Math.abs(r3));if(maxAbs===0)return;
-  var cfgs=[{r:r1,lId:'bl1',rId:'br1',ltId:'bt1',rtId:'bt1r',col:'#1d4ed8'},{r:r2,lId:'bl2',rId:'br2',ltId:'bt2',rtId:'bt2r',col:'#ea580c'},{r:r3,lId:'bl3',rId:'br3',ltId:'bt3',rtId:'bt3r',col:'#dc2626'}];
-  cfgs.forEach(function(c){
-    var pct=(Math.abs(c.r)/maxAbs)*46;
-    var bl=document.getElementById(c.lId),br=document.getElementById(c.rId);
-    var blt=document.getElementById(c.ltId),brt=document.getElementById(c.rtId);
-    bl.style.width='0';br.style.width='0';blt.textContent='';brt.textContent='';
-    setTimeout(function(){
-      if(c.r<0){bl.style.width=pct+'%';br.style.width='0';blt.textContent=fwBar(c.r);}
-      else{bl.style.width='0';br.style.width=pct+'%';brt.textContent=fwBar(c.r);}
-    },120);
+
+/* 차트 — 라벨을 바 안에 검정으로 표시 */
+function drawBar(idx, result, maxAbs){
+  var pct = maxAbs > 0 ? (Math.abs(result) / maxAbs) * 44 : 0;
+  var bl = document.getElementById('bl'+idx);
+  var br = document.getElementById('br'+idx);
+  var lblL = document.getElementById('bvL'+idx);
+  var lblR = document.getElementById('bvR'+idx);
+  bl.style.width='0'; br.style.width='0';
+  if(lblL) lblL.textContent='';
+  if(lblR) lblR.textContent='';
+  setTimeout(function(){
+    if(result < 0){
+      bl.style.width = pct+'%';
+      br.style.width = '0';
+      if(lblL){ lblL.className='bar-inner-lbl burden-lbl'; lblL.textContent=fwBar(result); }
+      if(lblR){ lblR.className='bar-inner-lbl'; lblR.textContent=''; }
+    } else {
+      bl.style.width = '0';
+      br.style.width = pct+'%';
+      if(lblL){ lblL.className='bar-inner-lbl'; lblL.textContent=''; }
+      if(lblR){ lblR.className='bar-inner-lbl refund-lbl'; lblR.textContent='+'+fwBar(result); }
+    }
+  }, 120);
+}
+function drawChart(r0, r1, r2, r3){
+  var maxAbs = Math.max(Math.abs(r0),Math.abs(r1),Math.abs(r2),Math.abs(r3));
+  if(maxAbs===0)return;
+  drawBar(0,r0,maxAbs);
+  drawBar(1,r1,maxAbs);
+  drawBar(2,r2,maxAbs);
+  drawBar(3,r3,maxAbs);
+}
+
+/* ─── 실시간 변동 티커 ─── */
+/* 기준일: 2026-04-01 00:00:00 KST */
+var TICK_START = new Date('2026-04-11T00:00:00+09:00');
+var tickInterval = null;
+var tickBases = {}; /* {1: r1, 2: r2, 3: r3}  양수=환급금, 음수=분담금 */
+
+function getElapsedWon(){
+  /* 2초당 1원 */
+  return Math.max(0, Math.floor((Date.now() - TICK_START.getTime()) / 2000));
+}
+
+function fwTick(n){
+  var abs = Math.abs(Math.round(n));
+  var man = Math.floor(abs / 10000);
+  var won = abs % 10000;
+  if(man > 0 && won > 0) return man.toLocaleString('ko-KR') + '만 ' + won.toLocaleString('ko-KR') + '원';
+  if(man > 0)             return man.toLocaleString('ko-KR') + '만원';
+  return abs.toLocaleString('ko-KR') + '원';
+}
+
+function renderOneTick(i, elapsed){
+  var base = tickBases[i];
+  if(base === undefined) return;
+
+  /* ① 카드 메인 금액 동적 업데이트 */
+  var adjusted = base - elapsed; /* 환급금이든 분담금이든 시간이 지날수록 불리 */
+  var lbl = document.getElementById('lbl'+i);
+  var amt = document.getElementById('amt'+i);
+  if(lbl && amt){
+    if(adjusted >= 0){
+      lbl.textContent = '환급금';
+      amt.textContent = '+' + fw(adjusted);
+      amt.className = 'ra refund';
+    } else {
+      lbl.textContent = '추가분담금';
+      amt.textContent = fw(Math.abs(adjusted));
+      amt.className = 'ra';
+    }
+  }
+
+  /* ② 하단 델타 표시 — flash 효과 */
+  var el = document.getElementById('tDelta'+i);
+  if(!el) return;
+  var isRefund = base >= 0;
+  el.classList.add('flash');
+  setTimeout(function(){
+    el.classList.remove('flash');
+    if(isRefund){
+      el.className = 'tick-delta dec';
+      el.textContent = '▼ -' + fwTick(elapsed) + ' 감소';
+    } else {
+      el.className = 'tick-delta inc';
+      el.textContent = '▲ +' + fwTick(elapsed) + ' 증가';
+    }
+  }, 80);
+}
+
+function updateAllTickers(){
+  var elapsed = getElapsedWon();
+  [1,2,3].forEach(function(i){ renderOneTick(i, elapsed); });
+}
+
+function startTickers(r1, r2, r3){
+  tickBases = {1: r1, 2: r2, 3: r3};
+  if(tickInterval) clearInterval(tickInterval);
+  [1,2,3].forEach(function(i){
+    var a = document.getElementById('tArea'+i);
+    if(a) a.style.display = 'block';
+  });
+  updateAllTickers(); /* 즉시 한 번 */
+  tickInterval = setInterval(updateAllTickers, 2000);
+}
+
+function stopTickers(){
+  if(tickInterval){ clearInterval(tickInterval); tickInterval = null; }
+  tickBases = {};
+  [1,2,3].forEach(function(i){
+    var a = document.getElementById('tArea'+i);
+    if(a) a.style.display = 'none';
+    var d = document.getElementById('tDelta'+i);
+    if(d) d.textContent = '—';
   });
 }
-function showResult(name,asset,key){
+
+function showResult(name, address, data, key){
   var label=key.includes('+')?key+'평형 (2채)':key+'평형';
   document.getElementById('rName').innerHTML='<strong>'+name+'</strong>님 · '+label;
   var price=PRICES[key];
-  var r1=Math.round(asset*RATES.dl)-price;
-  var r2=Math.round(asset*RATES.gsBest)-price;
-  var r3=Math.round(asset*RATES.gsWorst)-price;
-  setCard(1,r1);setCard(2,r2);setCard(3,r3);drawChart(r1,r2,r3);
-  var d12=Math.abs(r2-r1),d13=Math.abs(r3-r1);
+  var original=data.original;
+
+  /* 기존 추정분담금 — 종전자산 × 130.33% − 기준분양가 */
+  var docRight=Math.round(original*1.3033);
+  var docRes=docRight-price;
+  var docLbl=document.getElementById('doc-lbl');
+  var docVal=document.getElementById('doc-result');
+  if(docRes>=0){
+    docLbl.textContent='환급금';
+    docVal.textContent='+'+fw(docRes);
+    docVal.className='doc-val refund';
+  } else {
+    docLbl.textContent='추가분담금';
+    docVal.textContent=fw(Math.abs(docRes));
+    docVal.className='doc-val burden';
+  }
+
+  /* 시나리오별 분담금 */
+  var r1=data.dl-price;
+  var r2=data.gsBest-price;
+  var r3=data.gsWorst-price;
+  setCard(1,r1); setCard(2,r2); setCard(3,r3);
+  drawChart(docRes, r1, r2, r3);
+  startTickers(r1, r2, r3); /* 티커 시작 */
+
+  var d12=Math.abs(r2-r1), d13=Math.abs(r3-r1);
   var sm=document.getElementById('saveMsg');
-  if(r1>=0){sm.innerHTML='대림 착공 시 <strong>환급금 발생!</strong> GS 최악 대비 <strong>'+fw(d13)+'</strong> 이득입니다.';}
-  else{sm.innerHTML='대림 선택 시 GS 최상보다 <strong>'+fw(d12)+'</strong>, GS 최악보다 <strong>'+fw(d13)+'</strong> 절감!';}
-  document.getElementById('resBox').style.display='block';window.scrollTo({top:0,behavior:'smooth'});
+  if(r1>=0){sm.innerHTML='대림(6월 착공) 시 <strong>환급금 발생!</strong> GS(소송 지연) 대비 <strong>'+fw(d13)+'</strong> 이득입니다.';}
+  else{sm.innerHTML='대림(6월 착공) 선택 시 GS(8월 착공)보다 <strong>'+fw(d12)+'</strong>, GS(소송 지연) 보다 <strong>'+fw(d13)+'</strong> 절감!';}
+
+  document.getElementById('resBox').style.display='block';
+  window.scrollTo({top:0,behavior:'smooth'});
 }
+
+/* 초기화 */
 function resetCalc(){
-  document.getElementById('resBox').style.display='none';document.getElementById('formBox').style.display='';
+  stopTickers(); /* 티커 중지 */
+  document.getElementById('resBox').style.display='none';
+  document.getElementById('formBox').style.display='';
   document.getElementById('iName').value='';
-  var ai=document.getElementById('iAsset');ai.value='';ai.classList.remove('err');document.getElementById('assetErr').classList.remove('show');
+  var ai=document.getElementById('iAddress');
+  ai.value='';ai.classList.remove('err');
+  document.getElementById('addrErr').textContent='⚠ 지번을 올바르게 입력해 주세요. (예: 3156 또는 3156-1)';
+  document.getElementById('addrErr').classList.remove('show');
   document.querySelectorAll('.seg-btn').forEach(function(b){b.classList.remove('sel');});
   selKey=null;window.scrollTo({top:0,behavior:'smooth'});
 }
