@@ -247,27 +247,30 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
       <div class="err-msg" id="addrErr">⚠ 지번을 올바르게 입력해 주세요. (예: 1234 또는 1234-1)</div>
     </div>
     <div class="card">
-      <label>선택 평형</label>
-      <div class="py-label-row"><span class="pl">단일 평형</span></div>
+      <label>선택 타입</label>
+      <div class="py-label-row"><span class="pl">단일 타입</span></div>
       <div class="seg-grid">
-        <div class="seg-btn" data-key="59"  onclick="sPy(this)">59<span class="seg-sub">평형</span></div>
-        <div class="seg-btn" data-key="74"  onclick="sPy(this)">74<span class="seg-sub">평형</span></div>
-        <div class="seg-btn" data-key="84"  onclick="sPy(this)">84<span class="seg-sub">평형</span></div>
-        <div class="seg-btn" data-key="101" onclick="sPy(this)">101<span class="seg-sub">평형</span></div>
+        <div class="seg-btn" data-key="59"  onclick="sPy(this)">59<span class="seg-sub">타입</span></div>
+        <div class="seg-btn" data-key="74"  onclick="sPy(this)">74<span class="seg-sub">타입</span></div>
+        <div class="seg-btn" data-key="84"  onclick="sPy(this)">84<span class="seg-sub">타입</span></div>
+        <div class="seg-btn" data-key="101" onclick="sPy(this)">101<span class="seg-sub">타입</span></div>
       </div>
-      <div class="py-label-row" style="margin-top:4px"><span class="pl">복합 평형 (2채)</span></div>
-      <div class="seg-grid-3">
+      <div class="py-label-row" style="margin-top:4px"><span class="pl">복합 타입 (2채)</span></div>
+      <div class="seg-grid">
         <div class="seg-btn combo" data-key="59+59"  onclick="sPy(this)">59+59<span class="seg-sub">두 채</span></div>
+        <div class="seg-btn combo" data-key="59+74"  onclick="sPy(this)">59+74<span class="seg-sub">두 채</span></div>
         <div class="seg-btn combo" data-key="59+84"  onclick="sPy(this)">59+84<span class="seg-sub">두 채</span></div>
         <div class="seg-btn combo" data-key="59+101" onclick="sPy(this)">59+101<span class="seg-sub">두 채</span></div>
       </div>
-      <div class="seg-grid-3" style="margin-top:8px">
+      <div class="seg-grid" style="margin-top:8px">
         <div class="seg-btn combo" data-key="49+59"  onclick="sPy(this)">49+59<span class="seg-sub">두 채</span></div>
+        <div class="seg-btn combo" data-key="49+74"  onclick="sPy(this)">49+74<span class="seg-sub">두 채</span></div>
         <div class="seg-btn combo" data-key="49+84"  onclick="sPy(this)">49+84<span class="seg-sub">두 채</span></div>
         <div class="seg-btn combo" data-key="49+101" onclick="sPy(this)">49+101<span class="seg-sub">두 채</span></div>
       </div>
-      <div class="seg-grid-3" style="margin-top:8px">
+      <div class="seg-grid" style="margin-top:8px">
         <div class="seg-btn combo" data-key="39+59"  onclick="sPy(this)">39+59<span class="seg-sub">두 채</span></div>
+        <div class="seg-btn combo" data-key="39+74"  onclick="sPy(this)">39+74<span class="seg-sub">두 채</span></div>
         <div class="seg-btn combo" data-key="39+84"  onclick="sPy(this)">39+84<span class="seg-sub">두 채</span></div>
         <div class="seg-btn combo" data-key="39+101" onclick="sPy(this)">39+101<span class="seg-sub">두 채</span></div>
       </div>
@@ -303,7 +306,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
         <div class="dm-foot">기존 추정치</div>
       </div>
       <div class="sc-card sc-gsb">
-        <div class="sc-head"><span class="bdg">▲ 위험</span><div class="hn">GS건설<br>8월 착공</div><div class="hd">손해배상금 지불</div><div class="hd">평단가 729만원</div></div>
+        <div class="sc-head"><span class="bdg">▲ 위험</span><div class="hn">GS건설<br>8월 착공</div><div class="hd">손해배상금 지불 </div><div class="hd">평단가 729만원</div></div>
         <div class="sc-body">
           <div class="rl" id="lbl2">추가분담금</div>
           <div class="ra" id="amt2">—</div>
@@ -323,7 +326,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
       <div class="chart-title">한눈에 보는 비교 차트</div>
       <div>
         <div class="bar-row">
-          <div class="bar-name">대림<br>6월 착공</div>
+          <div class="bar-name">대림<br>6월착공</div>
           <div class="bar-track">
             <div class="bar-left"  id="bl1" style="width:0;background:#0D1F3C"></div>
             <div class="bar-right" id="br1" style="width:0;background:#22c55e"></div>
@@ -356,8 +359,8 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
         </div>
       </div>
       <div class="chart-legend">
+        <div class="leg-item"><div class="leg-dot" style="background:#0D1F3C"></div>대림 6월착공</div>
         <div class="leg-item"><div class="leg-dot" style="background:#6b7280"></div>기존추정</div>
-        <div class="leg-item"><div class="leg-dot" style="background:#0D1F3C"></div>대림</div>
         <div class="leg-item"><div class="leg-dot" style="background:#ea580c"></div>GS최상</div>
         <div class="leg-item"><div class="leg-dot" style="background:#dc2626"></div>GS최악</div>
         <div class="leg-item"><div class="leg-dot" style="background:#22c55e"></div>환급금</div>
@@ -404,9 +407,9 @@ var COUNTER_URL = 'https://script.google.com/macros/s/AKfycbxBErfUJc5g8OXx9Qoeme
 var UNIT={39:275731250, 49:358392857, 59:458090000,74:506968917,84:564562617,101:631581598};
 var PRICES={
   '59':UNIT[59],'74':UNIT[74],'84':UNIT[84],'101':UNIT[101],
-  '59+59':UNIT[59]*2,'59+84':UNIT[59]+UNIT[84],'59+101':UNIT[59]+UNIT[101],
-  '39+59':UNIT[39]+UNIT[59],'39+84':UNIT[39]+UNIT[84],'39+101':UNIT[39]+UNIT[101],
-  '49+59':UNIT[49]+UNIT[59],'49+84':UNIT[49]+UNIT[84],'49+101':UNIT[49]+UNIT[101]
+  '59+59':UNIT[59]*2,'59+74':UNIT[59]+UNIT[74],'59+84':UNIT[59]+UNIT[84],'59+101':UNIT[59]+UNIT[101],
+  '49+59':UNIT[49]+UNIT[59],'49+74':UNIT[49]+UNIT[74],'49+84':UNIT[49]+UNIT[84],'49+101':UNIT[49]+UNIT[101],
+  '39+59':UNIT[39]+UNIT[59],'39+74':UNIT[39]+UNIT[74],'39+84':UNIT[39]+UNIT[84],'39+101':UNIT[39]+UNIT[101]
 };
 var selKey=null;
 
@@ -433,7 +436,7 @@ function incCnt(){
 }
 loadCnt();
 
-/* 평형 선택 */
+/* 타입 선택 */
 function sPy(el){document.querySelectorAll('.seg-btn').forEach(function(b){b.classList.remove('sel');});el.classList.add('sel');selKey=el.dataset.key;}
 
 /* 금액 포맷 */
@@ -481,7 +484,7 @@ function startCalc(){
     document.getElementById('addrErr').classList.add('show');
     ai.focus();return;
   }
-  if(!selKey){alert('선택 평형을 골라 주세요.');return;}
+  if(!selKey){alert('선택 타입을 골라 주세요.');return;}
   /* 유효성 통과 → 비밀번호 모달 오픈 */
   openPwModal();
 }
@@ -726,7 +729,7 @@ function stopTickers(){
 }
 
 function showResult(name, address, data, key){
-  var label=key.includes('+')?key+'평형 (2채)':key+'평형';
+  var label=key.includes('+')?key+'타입 (2채)':key+'타입';
   document.getElementById('rName').innerHTML='<strong>'+name+'</strong>님 · '+label;
   var price=PRICES[key];
   var original=data.original;
