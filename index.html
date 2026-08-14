@@ -210,6 +210,78 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
 .sc-gsb .tick-delta.inc,.sc-gsw .tick-delta.inc{color:#b91c1c}
 .sc-gsb .tick-delta.dec,.sc-gsw .tick-delta.dec{color:#b45309}
 .tick-delta.flash{opacity:.15}
+
+/* ═══ GS 시공사 지위 상실 — 드라마틱 연출 ═══ */
+/* 속보 배너 */
+.breaking{position:relative;overflow:hidden;display:flex;align-items:center;gap:9px;
+  background:linear-gradient(100deg,#16a34a 0%,#15803d 55%,#166534 100%);
+  color:#fff;border-radius:12px;padding:12px 14px;margin-bottom:14px;
+  box-shadow:0 6px 22px rgba(22,163,74,.34)}
+.breaking .bk-siren{font-size:18px;line-height:1;flex-shrink:0;animation:sirenPulse 1.4s ease-in-out infinite}
+.breaking .bk-tag{flex-shrink:0;background:#fff;color:#15803d;font-size:10px;font-weight:900;
+  letter-spacing:.5px;padding:3px 9px;border-radius:6px}
+.breaking .bk-txt{font-size:12.5px;font-weight:800;line-height:1.4;letter-spacing:-.2px}
+.breaking .bk-txt b{color:#fde68a}
+.breaking::after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.28),transparent);
+  transform:skewX(-20deg);animation:bkSheen 3.2s ease-in-out infinite}
+@keyframes sirenPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.55;transform:scale(1.18)}}
+@keyframes bkSheen{0%{left:-60%}55%,100%{left:130%}}
+
+/* 노출 트리거 애니메이션 */
+.res-box.reveal .breaking{animation:bannerDrop .55s cubic-bezier(.22,1.2,.36,1) both}
+@keyframes bannerDrop{0%{opacity:0;transform:translateY(-22px) scale(.96)}100%{opacity:1;transform:none}}
+
+/* GS 카드 무력화 */
+.sc-card.gs-void{position:relative}
+.sc-card.gs-void .sc-head,.sc-card.gs-void .sc-body,.sc-card.gs-void .sc-foot{
+  filter:grayscale(1);opacity:.48}
+.sc-card.gs-void .sc-body .ra,.sc-card.gs-void .sc-head .hn{text-decoration:line-through;text-decoration-thickness:2px}
+.gs-stamp{position:absolute;top:50%;left:50%;z-index:5;pointer-events:none;
+  transform:translate(-50%,-50%) rotate(-12deg);
+  border:3px double #b91c1c;color:#b91c1c;background:rgba(255,255,255,.82);
+  font-size:15px;font-weight:900;letter-spacing:1px;padding:5px 12px;border-radius:8px;
+  box-shadow:0 2px 8px rgba(0,0,0,.18);white-space:nowrap;opacity:1}
+.res-box.reveal .sc-card.gs-void .gs-stamp{animation:stampSlam .5s cubic-bezier(.3,1.6,.5,1) both}
+.res-box.reveal .sc-gsb .gs-stamp{animation-delay:.45s}
+.res-box.reveal .sc-gsw .gs-stamp{animation-delay:.62s}
+@keyframes stampSlam{
+  0%{opacity:0;transform:translate(-50%,-50%) rotate(-12deg) scale(2.6)}
+  70%{opacity:1;transform:translate(-50%,-50%) rotate(-12deg) scale(.9)}
+  100%{opacity:1;transform:translate(-50%,-50%) rotate(-12deg) scale(1)}}
+
+/* 차트 GS 행·범례 무력화 */
+.bar-row.gs-void .bar-name{text-decoration:line-through;color:#9ca3af;opacity:.7}
+.bar-row.gs-void .bar-track{filter:grayscale(.85);opacity:.55}
+.leg-item.gs-void{text-decoration:line-through;opacity:.55}
+
+/* DL 히어로 — 축복 톤(밝고 화사하게) */
+.dl-hero{box-shadow:0 10px 34px rgba(37,99,235,.40)}
+.dl-hero-head{background:linear-gradient(135deg,#2f6fe0 0%,#1e50a8 100%)}
+.dl-hero-body{background:linear-gradient(165deg,#4a90f2 0%,#2f6fe0 52%,#1e57c0 100%);
+  position:relative;overflow:hidden}
+.dl-hero-body::before{content:"";position:absolute;top:-55%;left:50%;width:150%;height:130%;
+  transform:translateX(-50%);pointer-events:none;
+  background:radial-gradient(ellipse at center,rgba(255,255,255,.34),rgba(255,255,255,0) 62%)}
+.dl-hero-body>*:not(.fly-chip){position:relative;z-index:1}
+/* +1원 칩 — 절대배치 유지(레이아웃 밀림 방지) + 오른쪽 하단 알약으로 강조 */
+.dl-hero-body>.fly-chip{position:absolute;top:auto;bottom:14px;left:auto;right:14px;
+  transform:none;z-index:10;font-size:13px;font-weight:900;
+  background:#fff;color:#ef4444;padding:3px 10px;border-radius:999px;
+  box-shadow:0 2px 8px rgba(0,0,0,.22)}
+.dl-hero-body>.fly-chip.fly-chip-blue{color:#0d9488}
+.dl-hero-foot{background:#1e50a8;color:#dbeafe}
+.dl-hero-body .dh-lbl{background:rgba(255,255,255,.28)}
+.dl-hero-body .dh-amt{color:#fff !important;text-shadow:0 2px 14px rgba(0,0,0,.22)}
+.dl-hero-body .dh-amt.refund{color:#eafff4 !important}
+/* 유일 시공사 뱃지 — 골드 축하 */
+.dl-hero-head .dh-left .dh-badge.dh-solo{background:linear-gradient(135deg,#FFE082 0%,#FFC531 100%);
+  color:#7a4b00;box-shadow:0 2px 10px rgba(255,193,7,.45)}
+
+/* 경고 카드 → 회피됨 톤 */
+.wc.wc-cleared{background:#ecfdf5;border-color:#a7f3d0}
+.wc.wc-cleared .wt{color:#047857}
+.wc.wc-cleared p{color:#4b5563}
 </style>
 </head>
 <body>
@@ -262,13 +334,18 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
     <div class="lbar-wrap"><div class="lbar" id="lbar"></div></div><div class="lpct" id="lpct">0%</div>
   </div>
   <div class="res-box" id="resBox">
+    <div class="breaking">
+      <span class="bk-siren">🎉</span>
+      <span class="bk-tag">희소식</span>
+      <span class="bk-txt">DL이앤씨, <b>699만원 확정공사비</b>로 <b>12월 착공 예정</b></span>
+    </div>
     <div class="res-hdr"><div class="rname" id="rName"></div><div class="rsub">시나리오별 환급금 / 추가분담금</div></div>
     <div class="dl-hero">
       <div class="dl-hero-head">
         <div class="dh-left">
-          <div class="dh-badge">★ 최선 · 가장 유리</div>
-          <div class="dh-name">DL이앤씨 <span class="dl-date"></span> 착공</div>
-          <div class="dh-sub">평단가 682만원(확정공사비)</div>
+          <div class="dh-badge dh-solo">👑 우리 구역 유일한 시공사</div>
+          <div class="dh-name">DL이앤씨 <span class="dl-date"></span> 착공 <strong>확정!</strong></div>
+          <div class="dh-sub">평단가 699만원(확정공사비)</div>
         </div>
         <div class="dh-right">🏆</div>
       </div>
@@ -285,7 +362,8 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
         <div class="dm-body"><div class="rl" id="doc-lbl">추가분담금</div><div class="ra" id="doc-result">—</div></div>
         <div class="dm-foot">기존 추정치</div>
       </div>
-      <div class="sc-card sc-gsb">
+      <div class="sc-card sc-gsb gs-void">
+        <div class="gs-stamp">지위 상실</div>
         <div class="sc-head"><span class="bdg">▲ 위험</span><div class="hn">GS건설<br><span class="gs-date"></span> 착공</div><div class="hd">손해배상금 지불 </div><div class="hd">평단가 729만원</div></div>
         <div class="sc-body">
           <div class="rl" id="lbl2">추가분담금</div>
@@ -293,7 +371,8 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
         </div>
         <div class="sc-foot">손실 발생</div>
       </div>
-      <div class="sc-card sc-gsw">
+      <div class="sc-card sc-gsw gs-void">
+        <div class="gs-stamp">지위 상실</div>
         <div class="sc-head"><span class="bdg">✕ 최악</span><div class="hn">GS건설<br><span class="gs-worst-date"></span> 착공</div><div class="hd">소송 후 지연</div><div class="hd">평단가 729만원</div></div>
         <div class="sc-body">
           <div class="rl" id="lbl3">추가분담금</div>
@@ -308,7 +387,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
         <div class="bar-row">
           <div class="bar-name">DL이앤씨<br><span class="dl-date"></span> 착공</div>
           <div class="bar-track">
-            <div class="bar-left"  id="bl1" style="width:0;background:#0D1F3C"></div>
+            <div class="bar-left"  id="bl1" style="width:0;background:#2f6fe0"></div>
             <div class="bar-right" id="br1" style="width:0;background:#22c55e"></div>
             <span class="bar-track-lbl" id="bv1"></span>
           </div>
@@ -321,7 +400,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
             <span class="bar-track-lbl" id="bv0"></span>
           </div>
         </div>
-        <div class="bar-row">
+        <div class="bar-row gs-void">
           <div class="bar-name">GS건설<br><span class="gs-date"></span> 착공</div>
           <div class="bar-track">
             <div class="bar-left"  id="bl2" style="width:0;background:#ea580c"></div>
@@ -329,7 +408,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
             <span class="bar-track-lbl" id="bv2"></span>
           </div>
         </div>
-        <div class="bar-row">
+        <div class="bar-row gs-void">
           <div class="bar-name">GS건설<br><span class="gs-worst-date"></span> 착공</div>
           <div class="bar-track">
             <div class="bar-left"  id="bl3" style="width:0;background:#dc2626"></div>
@@ -339,17 +418,17 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
         </div>
       </div>
       <div class="chart-legend">
-        <div class="leg-item"><div class="leg-dot" style="background:#0D1F3C"></div>DL이앤씨 <span class="dl-date"></span> 착공</div>
+        <div class="leg-item"><div class="leg-dot" style="background:#2f6fe0"></div>DL이앤씨 <span class="dl-date"></span> 착공</div>
         <div class="leg-item"><div class="leg-dot" style="background:#6b7280"></div>기존추정</div>
-        <div class="leg-item"><div class="leg-dot" style="background:#ea580c"></div>GS최상</div>
-        <div class="leg-item"><div class="leg-dot" style="background:#dc2626"></div>GS최악</div>
+        <div class="leg-item gs-void"><div class="leg-dot" style="background:#ea580c"></div>GS최상</div>
+        <div class="leg-item gs-void"><div class="leg-dot" style="background:#dc2626"></div>GS최악</div>
         <div class="leg-item"><div class="leg-dot" style="background:#22c55e"></div>환급금</div>
       </div>
     </div>
     <div class="save-banner"><span class="si">💡</span><div class="st" id="saveMsg">계산 중...</div></div>
     <div class="warn-cards">
-      <div class="wc wc-gs"><div class="wt">⚠️ GS 최상도 위험</div><p>분양가상한제 적용 시 추가 손실. <span class="gs-date"></span> 착공도 불확실합니다.</p></div>
-      <div class="wc wc-worst"><div class="wt">🚨 소송 → 착공 지연</div><p><span class="gs-worst-date"></span> 착공 시 이자 부담 폭증. 입주 2년 이상 지연됩니다.</p></div>
+      <div class="wc wc-cleared"><div class="wt">✅ 회피됨 · GS 리스크 소멸</div><p>분양가상한제·손해배상 등 GS 손실 시나리오는 <b>시공사 지위 상실로 무효화</b>됐습니다.</p></div>
+      <div class="wc wc-cleared"><div class="wt">✅ 소송·착공 지연 리스크 해소</div><p>GS 착공 지연에 따른 이자 부담·입주 지연 우려가 <b>DL 단독 확정으로 사라졌습니다.</b></p></div>
     </div>
     <div class="notice"><p>※ 본 계산 결과는 참고용이며, 실제 분담금은 관리처분계획 확정 후 결정됩니다.</p></div>
     <a class="kakao-btn" href="https://invite.kakao.com/tc/MRUHU80L73" target="_blank" rel="noopener">
@@ -698,14 +777,19 @@ function showResult(name, address, data, key){
   if(r1>=0){sm.innerHTML='DL이앤씨 착공 시 <strong>환급금 발생!</strong> GS 최악 대비 <strong>'+fw(d13)+'</strong> 이득입니다.';}
   else{sm.innerHTML='DL이앤씨 선택 시 GS 최상보다 <strong>'+fw(d12)+'</strong>, GS 최악보다 <strong>'+fw(d13)+'</strong> 절감!';}
 
-  document.getElementById('resBox').style.display='block';
+  var rb=document.getElementById('resBox');
+  rb.style.display='block';
+  rb.classList.remove('reveal'); void rb.offsetWidth; /* reflow → 애니메이션 재생 */
+  rb.classList.add('reveal');
   window.scrollTo({top:0,behavior:'smooth'});
 }
 
 /* 초기화 */
 function resetCalc(){
   stopTickers(); /* 티커 중지 */
-  document.getElementById('resBox').style.display='none';
+  var rb=document.getElementById('resBox');
+  rb.classList.remove('reveal');
+  rb.style.display='none';
   document.getElementById('formBox').style.display='';
   document.getElementById('iName').value='';
   var ai=document.getElementById('iAddress');
@@ -718,17 +802,12 @@ function resetCalc(){
 
 /* 착공 시점 자동 계산 */
 (function(){
-  var n=new Date(); n.setDate(1); n.setMonth(n.getMonth()+2);
-  var txt=String(n.getFullYear()).slice(2)+'년 '+(n.getMonth()+1)+'월';
-  setTxt('.dl-date',txt);
+  /* DL 착공: 26년 12월 확정 */
+  setTxt('.dl-date','26년 12월');
 
-  /* GS 최상: 현재 달 +4개월 */
-  var g=new Date(); g.setDate(1); g.setMonth(g.getMonth()+4);
-  setTxt('.gs-date',String(g.getFullYear()).slice(2)+'년 '+(g.getMonth()+1)+'월');
-
-  /* GS 최악: 현재 연도 +2년 */
-  var w=new Date();
-  setTxt('.gs-worst-date',String(w.getFullYear()+2).slice(2)+'년');
+  /* GS건설 착공(고정): 위험 27년 12월 / 최악 28년 12월 */
+  setTxt('.gs-date','27년 12월');
+  setTxt('.gs-worst-date','28년 12월');
 
   function setTxt(sel,v){
     var els=document.querySelectorAll(sel);
