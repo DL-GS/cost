@@ -362,14 +362,13 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
         <div class="dm-body"><div class="rl" id="doc-lbl">추가분담금</div><div class="ra" id="doc-result">—</div></div>
         <div class="dm-foot">기존 추정치</div>
       </div>
-      <div class="sc-card sc-gsb gs-void">
-        <div class="gs-stamp">선정 취소</div>
-        <div class="sc-head"><span class="bdg">▲ 위험</span><div class="hn">GS건설<br><span class="gs-date"></span> 착공</div><div class="hd">손해배상금 지불 </div><div class="hd">평단가 729만원</div></div>
+      <div class="sc-card sc-gsw">
+        <div class="sc-head"><span class="bdg">▲ 위험</span><div class="hn">분양가<br>상한제 적용</div><div class="hd">규제 임박</div><div class="hd">추가 손실 급증</div></div>
         <div class="sc-body">
           <div class="rl" id="lbl2">추가분담금</div>
           <div class="ra" id="amt2">—</div>
         </div>
-        <div class="sc-foot">손실 발생</div>
+        <div class="sc-foot">막대한 손실</div>
       </div>
       <div class="sc-card sc-gsw gs-void">
         <div class="gs-stamp">선정 취소</div>
@@ -400,10 +399,10 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
             <span class="bar-track-lbl" id="bv0"></span>
           </div>
         </div>
-        <div class="bar-row gs-void">
-          <div class="bar-name">GS건설<br><span class="gs-date"></span> 착공</div>
+        <div class="bar-row">
+          <div class="bar-name">분양가<br>상한제</div>
           <div class="bar-track">
-            <div class="bar-left"  id="bl2" style="width:0;background:#ea580c"></div>
+            <div class="bar-left"  id="bl2" style="width:0;background:#dc2626"></div>
             <div class="bar-right" id="br2" style="width:0;background:#22c55e"></div>
             <span class="bar-track-lbl" id="bv2"></span>
           </div>
@@ -420,14 +419,14 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
       <div class="chart-legend">
         <div class="leg-item"><div class="leg-dot" style="background:#2f6fe0"></div>DL이앤씨 <span class="dl-date"></span> 착공</div>
         <div class="leg-item"><div class="leg-dot" style="background:#6b7280"></div>기존추정</div>
-        <div class="leg-item gs-void"><div class="leg-dot" style="background:#ea580c"></div>GS최상</div>
+        <div class="leg-item"><div class="leg-dot" style="background:#dc2626"></div>분양가상한제</div>
         <div class="leg-item gs-void"><div class="leg-dot" style="background:#dc2626"></div>GS최악</div>
         <div class="leg-item"><div class="leg-dot" style="background:#22c55e"></div>환급금</div>
       </div>
     </div>
     <div class="save-banner"><span class="si">💡</span><div class="st" id="saveMsg">계산 중...</div></div>
     <div class="warn-cards">
-      <div class="wc wc-cleared"><div class="wt">✅ 회피됨 · GS 리스크 소멸</div><p>분양가상한제·손해배상 등 GS 손실 시나리오는 <b>시공사 지위 상실로 무효화</b>됐습니다.</p></div>
+      <div class="wc wc-cleared"><div class="wt">✅ 회피됨 · GS 리스크 소멸</div><p>손해배상·소송 등 GS 손실 시나리오는 <b>GS 선정 취소로 무효화</b>됐습니다.</p></div>
       <div class="wc wc-cleared"><div class="wt">✅ 소송·착공 지연 리스크 해소</div><p>GS 착공 지연에 따른 이자 부담·입주 지연 우려가 <b>DL 단독 확정으로 사라졌습니다.</b></p></div>
     </div>
     <div class="notice"><p>※ 본 계산 결과는 참고용이며, 실제 분담금은 관리처분계획 확정 후 결정됩니다.</p></div>
@@ -442,7 +441,7 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
 
 <script>
 /* ★ Apps Script 배포 URL을 여기에 입력하세요 */
-var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzNgIfYQgq-eAwh4wVRQRxKxwcfFRt7WDbg6HHln2OlOlnjpt7SsyjnOgP9pf4X7hNC/exec';
+var APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyVPgl8Z2IwOr0f5GhxbEiF3MMBoc5Ka7hB5APPQA2YsHfwNBip8kymy_kGCvSejLZo/exec';
 var COUNTER_URL = 'https://script.google.com/macros/s/AKfycbxBErfUJc5g8OXx9QoemeHHjIMLjxIDQXUEFufLsV-4Bb0EvLx7WwfBo_CdsPMew-9Y/exec';
 
 var UNIT={39:275731250, 49:358392857, 59:458090000,74:506968917,84:564562617,101:631581598};
@@ -766,7 +765,7 @@ function showResult(name, address, data, key){
 
   /* 시나리오별 분담금 */
   var r1=data.dl-price;
-  var r2=data.gsBest-price;
+  var r2=data.caps-price;   /* 분양가상한제 — 서버(caps=종전자산×9%) − 분양가 */
   var r3=data.gsWorst-price;
   setCard(1,r1); setCard(2,r2); setCard(3,r3);
   drawChart(docRes, r1, r2, r3);
@@ -774,8 +773,8 @@ function showResult(name, address, data, key){
 
   var d12=Math.abs(r2-r1), d13=Math.abs(r3-r1);
   var sm=document.getElementById('saveMsg');
-  if(r1>=0){sm.innerHTML='DL이앤씨 착공 시 <strong>환급금 발생!</strong> GS 최악 대비 <strong>'+fw(d13)+'</strong> 이득입니다.';}
-  else{sm.innerHTML='DL이앤씨 선택 시 GS 최상보다 <strong>'+fw(d12)+'</strong>, GS 최악보다 <strong>'+fw(d13)+'</strong> 절감!';}
+  if(r1>=0){sm.innerHTML='DL이앤씨 착공 시 <strong>환급금 발생!</strong> 분양가상한제 대비 <strong>'+fw(d12)+'</strong> 이득입니다.';}
+  else{sm.innerHTML='DL이앤씨 선택 시 분양가상한제보다 <strong>'+fw(d12)+'</strong>, GS 최악보다 <strong>'+fw(d13)+'</strong> 절감!';}
 
   var rb=document.getElementById('resBox');
   rb.style.display='block';
