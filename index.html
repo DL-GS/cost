@@ -56,7 +56,15 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
 .res-hdr{text-align:center;padding:2px 0 16px}
 .res-hdr .rname{font-size:16px;font-weight:700;color:#111827;margin-bottom:2px}
 .res-hdr .rsub{font-size:13px;color:#6b7280}
-.three-cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-bottom:14px}
+.three-cols{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.three-cols .sc-card{display:flex;flex-direction:column}
+.three-cols .sc-body{flex:1;position:relative;padding:22px 8px 20px}
+.three-cols .sc-head .bdg{font-size:11px}
+.three-cols .sc-head .hn{font-size:15px}
+.three-cols .sc-head .hd{font-size:11px}
+.three-cols .sc-body .rl{font-size:11px}
+.three-cols .sc-body .ra{font-size:17px}
+.three-cols .sc-foot{font-size:11px}
 .sc-card{border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.08)}
 .sc-dl .sc-head{background:#1d4ed8;padding:14px 8px 12px;text-align:center}
 .sc-dl .sc-head .bdg{display:inline-block;background:#fbbf24;color:#1e3a8a;font-size:9px;font-weight:900;padding:3px 9px;border-radius:999px;margin-bottom:7px}
@@ -101,44 +109,6 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
 .cta-box .ct{font-size:12px;color:#93c5fd;margin-bottom:5px}
 .cta-box .ctt{font-size:20px;font-weight:900;color:#fff;line-height:1.3;letter-spacing:-.5px}
 .cta-box .ctb{font-size:12px;color:#bfdbfe;margin-top:8px;line-height:1.6}
-/* DL이앤씨 히어로 카드 — 브랜드 네이비 */
-.dl-hero{border-radius:18px;overflow:hidden;margin-bottom:14px;box-shadow:0 6px 28px rgba(13,31,60,.35)}
-.dl-hero-head{background:#0D1F3C;padding:14px 20px 12px;display:flex;align-items:center;justify-content:space-between}
-.dl-hero-head .dh-left .dh-badge{display:inline-block;background:#E8EDF5;color:#0D1F3C;font-size:10px;font-weight:900;padding:3px 10px;border-radius:999px;margin-bottom:6px}
-.dl-hero-head .dh-left .dh-name{font-size:17px;font-weight:900;color:#fff;line-height:1.3}
-.dl-hero-head .dh-left .dh-sub{font-size:11px;color:rgba(255,255,255,.6);margin-top:2px}
-.dl-hero-head .dh-right{font-size:26px}
-.dl-hero-body{background:#1B3A6B;padding:20px 20px 16px;text-align:center}
-.dl-hero-body .dh-lbl{font-size:11px;font-weight:700;background:rgba(255,255,255,.2);color:#fff;padding:4px 12px;border-radius:999px;display:inline-block;margin-bottom:10px}
-.dl-hero-body .dh-amt{font-size:28px;font-weight:900;color:#fff !important;line-height:1.3;word-break:break-all;overflow-wrap:anywhere}
-.dl-hero-body .dh-amt.refund{color:#6ee7b7 !important}
-.dl-hero-foot{background:#0D1F3C;padding:8px 16px;text-align:center;font-size:11px;font-weight:700;color:#A8BDD8;border-top:1px solid rgba(255,255,255,.1)}
-/* 기존 추정분담금 — 3열 안 소형 카드 */
-.doc-card{border:2px solid #1a2744;border-radius:14px;overflow:hidden;margin-bottom:14px}
-.doc-header{background:#1a2744;padding:10px 14px;text-align:center}
-.doc-header .doc-title{font-size:14px;font-weight:900;color:#fff;letter-spacing:1px}
-.doc-header .doc-sub{font-size:10px;color:rgba(255,255,255,.65);margin-top:3px;letter-spacing:.3px}
-.doc-body{background:#fff;padding:18px 16px 14px;text-align:center}
-.doc-body .doc-lbl{font-size:12px;font-weight:700;color:#6b7280;margin-bottom:6px}
-.doc-body .doc-val{font-size:26px;font-weight:900;line-height:1.2;word-break:keep-all}
-.doc-body .doc-val.burden{color:#dc2626}
-.doc-body .doc-val.refund{color:#16a34a}
-.doc-note{background:#f0f3fa;padding:8px 12px;border-top:1px solid #dce3f0}
-.doc-note p{font-size:10px;color:#4b5563;line-height:1.6}
-/* 기존추정 소형 (3열 안) — 톤다운 그레이 */
-.doc-mini{border-radius:14px;overflow:hidden;box-shadow:0 2px 8px rgba(0,0,0,.1);height:100%}
-.doc-mini .dm-head{background:#6b7280;padding:13px 8px 11px;text-align:center}
-.doc-mini .dm-head .bdg{display:inline-block;background:rgba(255,255,255,.2);color:#fff;font-size:9px;font-weight:700;padding:3px 9px;border-radius:999px;margin-bottom:7px}
-.doc-mini .dm-head .hn{font-size:11px;font-weight:700;color:#fff;line-height:1.4}
-.doc-mini .dm-head .hd{font-size:9px;color:rgba(255,255,255,.65);margin-top:3px}
-.doc-mini .dm-body{background:#e5e7eb;padding:14px 6px 12px;text-align:center;border-left:1.5px solid #9ca3af;border-right:1.5px solid #9ca3af}
-.doc-mini .dm-body .rl{font-size:9px;font-weight:700;background:#d1d5db;color:#4b5563;padding:3px 8px;border-radius:999px;display:inline-block;margin-bottom:8px}
-.doc-mini .dm-body .ra{font-size:13px;font-weight:900;color:#374151;line-height:1.35;word-break:break-all;overflow-wrap:anywhere}
-.doc-mini .dm-body .ra.refund{color:#374151}
-.doc-mini .dm-foot{background:#e5e7eb;padding:7px 4px;text-align:center;font-size:10px;font-weight:700;color:#6b7280;border:1.5px solid #9ca3af;border-top:1px solid #d1d5db}
-/* DL이앤씨 히어로 카드 — 금액 흰색 강조 */
-.dl-hero-body .dh-amt{font-size:28px;font-weight:900;color:#fff;line-height:1.3;word-break:break-all;overflow-wrap:anywhere}
-.dl-hero-body .dh-amt.refund{color:#6ee7b7}
 /* CHART — bar labels always outside bar */
 .chart-wrap{background:#fff;border-radius:16px;border:1px solid #e5e7eb;padding:18px 16px;margin-bottom:12px;box-shadow:0 1px 6px rgba(0,0,0,.05)}
 .chart-title{font-size:13px;font-weight:700;color:#374151;margin-bottom:3px}
@@ -232,56 +202,25 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
 .res-box.reveal .breaking{animation:bannerDrop .55s cubic-bezier(.22,1.2,.36,1) both}
 @keyframes bannerDrop{0%{opacity:0;transform:translateY(-22px) scale(.96)}100%{opacity:1;transform:none}}
 
-/* GS 카드 무력화 */
-.sc-card.gs-void{position:relative}
-.sc-card.gs-void .sc-head,.sc-card.gs-void .sc-body,.sc-card.gs-void .sc-foot{
-  filter:grayscale(1);opacity:.48}
-.sc-card.gs-void .sc-body .ra,.sc-card.gs-void .sc-head .hn{text-decoration:line-through;text-decoration-thickness:2px}
-.gs-stamp{position:absolute;top:50%;left:50%;z-index:5;pointer-events:none;
-  transform:translate(-50%,-50%) rotate(-12deg);
-  border:3px double #b91c1c;color:#b91c1c;background:rgba(255,255,255,.82);
-  font-size:15px;font-weight:900;letter-spacing:1px;padding:5px 12px;border-radius:8px;
-  box-shadow:0 2px 8px rgba(0,0,0,.18);white-space:nowrap;opacity:1}
-.res-box.reveal .sc-card.gs-void .gs-stamp{animation:stampSlam .5s cubic-bezier(.3,1.6,.5,1) both}
-.res-box.reveal .sc-gsb .gs-stamp{animation-delay:.45s}
-.res-box.reveal .sc-gsw .gs-stamp{animation-delay:.62s}
-@keyframes stampSlam{
-  0%{opacity:0;transform:translate(-50%,-50%) rotate(-12deg) scale(2.6)}
-  70%{opacity:1;transform:translate(-50%,-50%) rotate(-12deg) scale(.9)}
-  100%{opacity:1;transform:translate(-50%,-50%) rotate(-12deg) scale(1)}}
-
-/* 차트 GS 행·범례 무력화 */
-.bar-row.gs-void .bar-name{text-decoration:line-through;color:#9ca3af;opacity:.7}
-.bar-row.gs-void .bar-track{filter:grayscale(.85);opacity:.55}
-.leg-item.gs-void{text-decoration:line-through;opacity:.55}
-
-/* DL 히어로 — 축복 톤(밝고 화사하게) */
-.dl-hero{box-shadow:0 10px 34px rgba(37,99,235,.40)}
-.dl-hero-head{background:linear-gradient(135deg,#2f6fe0 0%,#1e50a8 100%)}
-.dl-hero-body{background:linear-gradient(165deg,#4a90f2 0%,#2f6fe0 52%,#1e57c0 100%);
-  position:relative;overflow:hidden}
-.dl-hero-body::before{content:"";position:absolute;top:-55%;left:50%;width:150%;height:130%;
-  transform:translateX(-50%);pointer-events:none;
-  background:radial-gradient(ellipse at center,rgba(255,255,255,.34),rgba(255,255,255,0) 62%)}
-.dl-hero-body>*:not(.fly-chip){position:relative;z-index:1}
-/* +1원 칩 — 절대배치 유지(레이아웃 밀림 방지) + 오른쪽 하단 알약으로 강조 */
-.dl-hero-body>.fly-chip{position:absolute;top:auto;bottom:14px;left:auto;right:14px;
-  transform:none;z-index:10;font-size:13px;font-weight:900;
-  background:#fff;color:#ef4444;padding:3px 10px;border-radius:999px;
-  box-shadow:0 2px 8px rgba(0,0,0,.22)}
-.dl-hero-body>.fly-chip.fly-chip-blue{color:#0d9488}
-.dl-hero-foot{background:#1e50a8;color:#dbeafe}
-.dl-hero-body .dh-lbl{background:rgba(255,255,255,.28)}
-.dl-hero-body .dh-amt{color:#fff !important;text-shadow:0 2px 14px rgba(0,0,0,.22)}
-.dl-hero-body .dh-amt.refund{color:#eafff4 !important}
-/* 유일 시공사 뱃지 — 골드 축하 */
-.dl-hero-head .dh-left .dh-badge.dh-solo{background:linear-gradient(135deg,#FFE082 0%,#FFC531 100%);
-  color:#7a4b00;box-shadow:0 2px 10px rgba(255,193,7,.45)}
-
-/* 경고 카드 → 회피됨 톤 */
-.wc.wc-cleared{background:#ecfdf5;border-color:#a7f3d0}
-.wc.wc-cleared .wt{color:#047857}
-.wc.wc-cleared p{color:#4b5563}
+/* 해임총회 포스터 배너 */
+.meet-poster{position:relative;overflow:hidden;border-radius:16px;margin-bottom:12px;padding:24px 18px 20px;text-align:center;
+  background:linear-gradient(160deg,#0f1f3d 0%,#16305f 60%,#1d3f7a 100%);color:#fff;box-shadow:0 6px 22px rgba(15,31,61,.3)}
+.meet-poster::before{content:"";position:absolute;inset:8px;border:1.5px solid rgba(251,191,36,.45);border-radius:11px;pointer-events:none}
+.mp-kicker{font-size:11px;font-weight:700;letter-spacing:2px;color:#fbbf24;margin-bottom:10px}
+.mp-title{font-size:22px;font-weight:900;line-height:1.35;letter-spacing:-.5px}
+.mp-title em{font-style:normal;color:#fbbf24}
+.mp-event{display:inline-block;margin:14px 0 14px;background:#dc2626;color:#fff;font-size:15px;font-weight:900;padding:7px 18px;border-radius:999px;letter-spacing:.5px}
+.mp-when{display:flex;justify-content:center;align-items:baseline;gap:10px;padding:12px 0;border-top:1px dashed rgba(255,255,255,.25);border-bottom:1px dashed rgba(255,255,255,.25);margin:0 10px}
+.mp-date{font-size:26px;font-weight:900;color:#fff}
+.mp-date span{font-size:15px;color:#cbd5e1}
+.mp-time{font-size:22px;font-weight:900;color:#fbbf24}
+.mp-msg{font-size:13px;line-height:1.7;color:#e2e8f0;margin-top:14px}
+.mp-msg b{color:#fff;font-size:15px}
+/* +1원 칩 — 절대배치(레이아웃 밀림 방지), 카드 하단 중앙 알약 */
+.three-cols .sc-body>.fly-chip{position:absolute;top:auto;bottom:4px;
+  font-size:10px;font-weight:900;background:#fff;color:#ef4444;padding:1px 8px;border-radius:999px;
+  box-shadow:0 1px 4px rgba(0,0,0,.2);animation:none}
+.three-cols .sc-body>.fly-chip.fly-chip-blue{color:#0d9488}
 </style>
 </head>
 <body>
@@ -337,42 +276,20 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
     <div class="breaking">
       <span class="bk-siren">🎉</span>
       <span class="bk-tag">희소식</span>
-      <span class="bk-txt">DL이앤씨, <b>699만원 확정공사비</b>로 <b>12월 착공 예정</b></span>
+      <span class="bk-txt">DL이앤씨, <b>699만원 확정공사비</b>로 <b>27년 2월 착공 예정</b></span>
     </div>
     <div class="res-hdr"><div class="rname" id="rName"></div><div class="rsub">시나리오별 환급금 / 추가분담금</div></div>
-    <div class="dl-hero">
-      <div class="dl-hero-head">
-        <div class="dh-left">
-          <div class="dh-badge dh-solo">👑 우리 구역 유일한 시공사</div>
-          <div class="dh-name">DL이앤씨 <span class="dl-date"></span> 착공 <strong>확정!</strong></div>
-          <div class="dh-sub">평단가 699만원(확정공사비)</div>
-        </div>
-        <div class="dh-right">🏆</div>
-      </div>
-      <div class="dl-hero-body">
-        <div class="dh-lbl" id="lbl1">추가분담금</div>
-        <div class="dh-amt" id="amt1">—</div>
-      </div>
-      <div class="dl-hero-foot">GS건설 대비 수천만 원 ~ 수억 원 절감</div>
-    </div>
-    <!-- 기존추정 + GS 비교 3열 -->
     <div class="three-cols">
-      <div class="doc-mini">
-        <div class="dm-head"><span class="bdg">관리처분계획안</span><div class="hn">기존<br>추정분담금</div><div class="hd">비례율 130.33%</div><div class="hd">21년도 계획안</div></div>
-        <div class="dm-body"><div class="rl" id="doc-lbl">추가분담금</div><div class="ra" id="doc-result">—</div></div>
-        <div class="dm-foot">기존 추정치</div>
+      <div class="sc-card sc-dl">
+        <div class="sc-head"><span class="bdg">비례율 125%</span><div class="hn">DL이앤씨<br><span class="dl-date"></span> 착공</div><div class="hd">평단가 699만원</div></div>
+        <div class="sc-body">
+          <div class="rl" id="lbl1">추가분담금</div>
+          <div class="ra" id="amt1">—</div>
+        </div>
+        <div class="sc-foot">확정공사비</div>
       </div>
       <div class="sc-card sc-gsw">
-        <div class="sc-head"><span class="bdg">▲ 위험</span><div class="hn">분양가<br>상한제 적용</div><div class="hd">규제 임박</div><div class="hd">추가 손실 급증</div></div>
-        <div class="sc-body">
-          <div class="rl" id="lbl2">추가분담금</div>
-          <div class="ra" id="amt2">—</div>
-        </div>
-        <div class="sc-foot">막대한 손실</div>
-      </div>
-      <div class="sc-card sc-gsw gs-void">
-        <div class="gs-stamp">선정 취소</div>
-        <div class="sc-head"><span class="bdg">✕ 최악</span><div class="hn">GS건설<br><span class="gs-worst-date"></span> 착공</div><div class="hd">소송 후 지연</div><div class="hd">평단가 729만원</div></div>
+        <div class="sc-head"><span class="bdg">비례율 75%</span><div class="hn">GS건설<br><span class="gs-worst-date"></span> 착공</div><div class="hd">평단가 729만원</div></div>
         <div class="sc-body">
           <div class="rl" id="lbl3">추가분담금</div>
           <div class="ra" id="amt3">—</div>
@@ -392,22 +309,6 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
           </div>
         </div>
         <div class="bar-row">
-          <div class="bar-name">기존<br>추정</div>
-          <div class="bar-track">
-            <div class="bar-left"  id="bl0" style="width:0;background:#6b7280"></div>
-            <div class="bar-right" id="br0" style="width:0;background:#22c55e"></div>
-            <span class="bar-track-lbl" id="bv0"></span>
-          </div>
-        </div>
-        <div class="bar-row">
-          <div class="bar-name">분양가<br>상한제</div>
-          <div class="bar-track">
-            <div class="bar-left"  id="bl2" style="width:0;background:#dc2626"></div>
-            <div class="bar-right" id="br2" style="width:0;background:#22c55e"></div>
-            <span class="bar-track-lbl" id="bv2"></span>
-          </div>
-        </div>
-        <div class="bar-row gs-void">
           <div class="bar-name">GS건설<br><span class="gs-worst-date"></span> 착공</div>
           <div class="bar-track">
             <div class="bar-left"  id="bl3" style="width:0;background:#dc2626"></div>
@@ -418,16 +319,24 @@ body{font-family:'Noto Sans KR',sans-serif;background:#f4f6fa;color:#111827}
       </div>
       <div class="chart-legend">
         <div class="leg-item"><div class="leg-dot" style="background:#2f6fe0"></div>DL이앤씨 <span class="dl-date"></span> 착공</div>
-        <div class="leg-item"><div class="leg-dot" style="background:#6b7280"></div>기존추정</div>
-        <div class="leg-item"><div class="leg-dot" style="background:#dc2626"></div>분양가상한제</div>
-        <div class="leg-item gs-void"><div class="leg-dot" style="background:#dc2626"></div>GS최악</div>
+        <div class="leg-item"><div class="leg-dot" style="background:#dc2626"></div>GS건설 <span class="gs-worst-date"></span> 착공</div>
         <div class="leg-item"><div class="leg-dot" style="background:#22c55e"></div>환급금</div>
       </div>
     </div>
+    <div class="meet-poster">
+      <div class="mp-kicker">조합원 여러분께 알립니다</div>
+      <div class="mp-title">상대원2구역<br><em>정상화로 가는 길</em></div>
+      <div class="mp-event">조합장 해임총회</div>
+      <div class="mp-when">
+        <div class="mp-date">11월 14일 <span>(토)</span></div>
+        <div class="mp-time">오후 2시</div>
+      </div>
+      <div class="mp-msg">여러분의 한 표가 사업 정상화의 시작입니다.<br><b>꼭 참석해 주세요.</b></div>
+    </div>
     <div class="save-banner"><span class="si">💡</span><div class="st" id="saveMsg">계산 중...</div></div>
     <div class="warn-cards">
-      <div class="wc wc-cleared"><div class="wt">✅ 회피됨 · GS 리스크 소멸</div><p>손해배상·소송 등 GS 손실 시나리오는 <b>GS 선정 취소로 무효화</b>됐습니다.</p></div>
-      <div class="wc wc-cleared"><div class="wt">✅ 소송·착공 지연 리스크 해소</div><p>GS 착공 지연에 따른 이자 부담·입주 지연 우려가 <b>DL 단독 확정으로 사라졌습니다.</b></p></div>
+      <div class="wc wc-gs"><div class="wt">⚠ GS건설 비례율 75%</div><p>DL이앤씨(125%)보다 비례율이 <b>50%p 낮아</b> 권리가액이 크게 줄어듭니다.</p></div>
+      <div class="wc wc-worst"><div class="wt">⚠ 착공 2년 지연</div><p>GS건설은 <b>29년 2월 착공</b>으로 DL보다 2년 늦어 이자·입주 지연 부담이 커집니다.</p></div>
     </div>
     <div class="notice"><p>※ 본 계산 결과는 참고용이며, 실제 분담금은 관리처분계획 확정 후 결정됩니다.</p></div>
     <a class="kakao-btn" href="https://invite.kakao.com/tc/MRUHU80L73" target="_blank" rel="noopener">
@@ -579,23 +488,8 @@ function setCard(idx,result){
   var lbl=document.getElementById('lbl'+idx);
   var amt=document.getElementById('amt'+idx);
   if(!lbl||!amt) return;
-  if(idx===1){
-    /* DL 히어로 카드 */
-    if(result>=0){
-      lbl.textContent='환급금';
-      amt.textContent='+'+fw(result);
-      amt.className='dh-amt refund';
-      amt.style.color='#6ee7b7';
-    } else {
-      lbl.textContent='추가분담금';
-      amt.textContent=fw(Math.abs(result));
-      amt.className='dh-amt';
-      amt.style.color='#ffffff';
-    }
-  } else {
-    if(result>=0){lbl.textContent='환급금';amt.textContent='+'+fw(result);amt.className='ra refund';}
-    else{lbl.textContent='추가분담금';amt.textContent=fw(Math.abs(result));amt.className='ra';}
-  }
+  if(result>=0){lbl.textContent='환급금';amt.textContent='+'+fw(result);amt.className='ra refund';}
+  else{lbl.textContent='추가분담금';amt.textContent=fw(Math.abs(result));amt.className='ra';}
 }
 
 /* 차트 — 라벨을 바 위 절대위치(바 중앙)에 배치 → 짤림 없음 */
@@ -629,12 +523,10 @@ function drawBar(idx, result, maxAbs){
     }
   }, 120);
 }
-function drawChart(r0, r1, r2, r3){
-  var maxAbs = Math.max(Math.abs(r0),Math.abs(r1),Math.abs(r2),Math.abs(r3));
+function drawChart(r1, r3){
+  var maxAbs = Math.max(Math.abs(r1),Math.abs(r3));
   if(maxAbs===0)return;
-  drawBar(0,r0,maxAbs);
   drawBar(1,r1,maxAbs);
-  drawBar(2,r2,maxAbs);
   drawBar(3,r3,maxAbs);
 }
 
@@ -682,29 +574,14 @@ function renderOneTick(i, elapsed){
 
   if(lbl && amt){
     /* 금액 업데이트 */
-    if(i === 1){
-      /* DL 히어로 카드 */
-      if(adjusted >= 0){
-        lbl.textContent = '환급금';
-        amt.textContent = '+' + fw(adjusted);
-        amt.className = 'dh-amt refund';
-        amt.style.color = '#6ee7b7';
-      } else {
-        lbl.textContent = '추가분담금';
-        amt.textContent = fw(Math.abs(adjusted));
-        amt.className = 'dh-amt';
-        amt.style.color = '#ffffff';
-      }
+    if(adjusted >= 0){
+      lbl.textContent = '환급금';
+      amt.textContent = '+' + fw(adjusted);
+      amt.className = 'ra refund';
     } else {
-      if(adjusted >= 0){
-        lbl.textContent = '환급금';
-        amt.textContent = '+' + fw(adjusted);
-        amt.className = 'ra refund';
-      } else {
-        lbl.textContent = '추가분담금';
-        amt.textContent = fw(Math.abs(adjusted));
-        amt.className = 'ra';
-      }
+      lbl.textContent = '추가분담금';
+      amt.textContent = fw(Math.abs(adjusted));
+      amt.className = 'ra';
     }
 
     /* ★ 강조 효과: 펄스 + 날아오르는 칩 */
@@ -717,13 +594,13 @@ function renderOneTick(i, elapsed){
 
 function updateAllTickers(){
   var elapsed = getElapsedWon();
-  [1,2,3].forEach(function(i){ renderOneTick(i, elapsed); });
+  [1,3].forEach(function(i){ renderOneTick(i, elapsed); });
 }
 
-function startTickers(r1, r2, r3){
-  tickBases = {1: r1, 2: r2, 3: r3};
+function startTickers(r1, r3){
+  tickBases = {1: r1, 3: r3};
   if(tickInterval) clearInterval(tickInterval);
-  [1,2,3].forEach(function(i){
+  [1,3].forEach(function(i){
     var a = document.getElementById('tArea'+i);
     if(a) a.style.display = 'block';
   });
@@ -734,7 +611,7 @@ function startTickers(r1, r2, r3){
 function stopTickers(){
   if(tickInterval){ clearInterval(tickInterval); tickInterval=null; }
   tickBases={};
-  [1,2,3].forEach(function(i){
+  [1,3].forEach(function(i){
     var a = document.getElementById('tArea'+i);
     if(a) a.style.display = 'none';
     var d = document.getElementById('tDelta'+i);
@@ -748,33 +625,16 @@ function showResult(name, address, data, key){
   var price=PRICES[key];
   var original=data.original;
 
-  /* 기존 추정분담금 — 종전자산 × 130.33% − 기준분양가 */
-  var docRight=Math.round(original*1.3033);
-  var docRes=docRight-price;
-  var docLbl=document.getElementById('doc-lbl');
-  var docVal=document.getElementById('doc-result');
-  if(docRes>=0){
-    docLbl.textContent='환급금';
-    docVal.textContent='+'+fw(docRes);
-    docVal.className='ra refund';
-  } else {
-    docLbl.textContent='추가분담금';
-    docVal.textContent=fw(Math.abs(docRes));
-    docVal.className='ra';
-  }
+  var r1=Math.round(original*1.25)-price;
+  var r3=Math.round(original*0.75)-price;
+  setCard(1,r1); setCard(3,r3);
+  drawChart(r1, r3);
+  startTickers(r1, r3);
 
-  /* 시나리오별 분담금 */
-  var r1=data.dl-price;
-  var r2=data.caps-price;   /* 분양가상한제 — 서버(caps=종전자산×9%) − 분양가 */
-  var r3=data.gsWorst-price;
-  setCard(1,r1); setCard(2,r2); setCard(3,r3);
-  drawChart(docRes, r1, r2, r3);
-  startTickers(r1, r2, r3); /* 티커 시작 */
-
-  var d12=Math.abs(r2-r1), d13=Math.abs(r3-r1);
+  var d13=Math.abs(r3-r1);
   var sm=document.getElementById('saveMsg');
-  if(r1>=0){sm.innerHTML='DL이앤씨 착공 시 <strong>환급금 발생!</strong> 분양가상한제 대비 <strong>'+fw(d12)+'</strong> 이득입니다.';}
-  else{sm.innerHTML='DL이앤씨 선택 시 분양가상한제보다 <strong>'+fw(d12)+'</strong>, GS 최악보다 <strong>'+fw(d13)+'</strong> 절감!';}
+  if(r1>=0){sm.innerHTML='DL이앤씨 착공 시 <strong>환급금 발생!</strong> GS건설 대비 <strong>'+fw(d13)+'</strong> 이득입니다.';}
+  else{sm.innerHTML='DL이앤씨 선택 시 GS건설보다 <strong>'+fw(d13)+'</strong> 절감!';}
 
   var rb=document.getElementById('resBox');
   rb.style.display='block';
@@ -801,12 +661,8 @@ function resetCalc(){
 
 /* 착공 시점 자동 계산 */
 (function(){
-  /* DL 착공: 26년 12월 확정 */
-  setTxt('.dl-date','26년 12월');
-
-  /* GS건설 착공(고정): 위험 27년 12월 / 최악 28년 12월 */
-  setTxt('.gs-date','27년 12월');
-  setTxt('.gs-worst-date','28년 12월');
+  setTxt('.dl-date','27년 2월');
+  setTxt('.gs-worst-date','29년 2월');
 
   function setTxt(sel,v){
     var els=document.querySelectorAll(sel);
